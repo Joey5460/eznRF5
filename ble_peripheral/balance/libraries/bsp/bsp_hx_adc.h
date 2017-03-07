@@ -13,6 +13,7 @@ int32_t read_hx_adc(int32_t *adc_cnt);
 channel_t get_channel(void);
 void set_channel(channel_t gain);
 void set_rate(uint8_t rate);
+void power_on(void);
 
 void get_average(uint8_t times, int32_t * adc_cnt);
 void get_value(uint8_t times, int32_t * adc_cnt);

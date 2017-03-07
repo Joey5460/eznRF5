@@ -45,24 +45,24 @@
 #endif
 
 #ifndef TWI1_SCL_PIN 
-//#define TWI1_SCL_PIN 15
-//#define TWI1_SCL_PIN 27
-#define TWI1_SCL_PIN 30
+#define TWI1_SCL_PIN 15
 #endif
 
 #ifndef TWI1_SDA_PIN 
-//#define TWI1_SDA_PIN 14
-//#define TWI1_SDA_PIN 26
-#define TWI1_SDA_PIN 31
+#define TWI1_SDA_PIN 14
 #endif
 
-#define MPU_INT_PIN 2
+#define MPU_INT_PIN 13
 
+#define HX_ADC0_PIN 7
+#define HX_ADC1_PIN 2
 
-#define HX_RATE_PIN 8
-#define HX_ADC0_PIN 5
-#define HX_ADC1_PIN 9
-#define HX_SCK_PIN 10
+#define HX_SCK0_PIN 8
+#define HX_SCK1_PIN 5
+#define HX_SCK2_PIN 10
+#define HX_SCK3_PIN 6
+
+#define HX_POW_PIN 12
 
 #define  FLASH_NCS_PIN     18
 #define  FLASH_WP_PIN      20

@@ -104,8 +104,8 @@ void st_read_hx_adc(uint8_t ch, int32_t * adc_val)
 {
     if (0 == ch){
         //set_channel(A128); 
-        //read_hx_adc(adc_val);
-        get_value(5, adc_val);
+        read_hx_adc(adc_val);
+        //get_value(5, adc_val);
 
     }else if(1 == ch) {
         //set_channel(B32); 

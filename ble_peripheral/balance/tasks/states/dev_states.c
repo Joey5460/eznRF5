@@ -58,7 +58,7 @@ dev_state_t do_state_active(st_data_t *data)
 		int32_t ch_b[2] = {0, 0};
 
         st_read_hx_adc(0, ch_a);
-        st_read_hx_adc(1, ch_b);
+        //st_read_hx_adc(1, ch_b);
         st_get_offset(ch_b);
 
         NRF_LOG_INFO("%u, %d, %d, %d, %d\r\n",get_utc(),ch_a[0], ch_a[1], ch_b[0], ch_b[1]);
