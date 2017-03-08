@@ -8,7 +8,7 @@ do
 key="$1"
 case $key in
     le)
-		vim -S ~/.vim/sessions/zulp.vim
+		vim -S ~/.vim/sessions/ezle.vim
         ;;
     *)
         ;;

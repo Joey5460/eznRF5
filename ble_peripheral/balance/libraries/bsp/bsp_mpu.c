@@ -194,7 +194,7 @@ void bsp_mpu_init(void)
 		NRF_LOG_INFO("\r\n mpu_set_dmp_state failed \r\n");
 
 	}
-    bsp_mpu_int_init();
+    //bsp_mpu_int_init();
 }
 
 void bsp_mpu_uninit(void)

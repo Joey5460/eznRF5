@@ -100,20 +100,23 @@ void st_store_active_data(void)
 	}
 }
 
-void st_read_hx_adc(uint8_t ch, int32_t * adc_val)
-{
-    if (0 == ch){
-        //set_channel(A128); 
-        read_hx_adc(adc_val);
-        //get_value(5, adc_val);
+static hx_adc_cfg_t  hx_adc[HX_ADC_NUM]={
+    {.sck = HX_SCK0_PIN, .adc = HX_ADC0_PIN, .gain=1},
+    {.sck = HX_SCK1_PIN, .adc = HX_ADC1_PIN, .gain=1},
+    {.sck = HX_SCK2_PIN, .adc = HX_ADC2_PIN, .gain=1},
+    {.sck = HX_SCK3_PIN, .adc = HX_ADC3_PIN, .gain=1},
+};
 
-    }else if(1 == ch) {
-        //set_channel(B32); 
-        //read_hx_adc(adc_val);
+int32_t st_read_hx_adc(int32_t *hx_adc_val)
+{
+    uint8_t i = 0;
+    for (i=0; i<HX_ADC_NUM;i++){
+        hx_adc_val[i] = read_hx_adc(&hx_adc[i]);
     }
+    return 0; 
 }
 
 void st_get_offset(int32_t * adc_val)
 {
-    get_offset(adc_val);
+    //get_offset(adc_val);
 }

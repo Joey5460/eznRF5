@@ -8,16 +8,24 @@ typedef enum{
     A64=3,
 }channel_t;
 
-void hx_adc_init(void);
-int32_t read_hx_adc(int32_t *adc_cnt);
-channel_t get_channel(void);
-void set_channel(channel_t gain);
-void set_rate(uint8_t rate);
+typedef struct {
+    uint8_t  sck; 
+    uint8_t  adc;
+    int32_t offset;
+    uint8_t gain;
+
+} hx_adc_cfg_t;
+
+void hx_adc_balance_init();
+void hx_adc_init(hx_adc_cfg_t * hx_adc);
+int32_t read_hx_adc(hx_adc_cfg_t * hx_adc);
+channel_t get_channel(hx_adc_cfg_t * hx_adc);
+void set_channel(hx_adc_cfg_t * hx_adc, channel_t gain);
 void power_on(void);
 
-void get_average(uint8_t times, int32_t * adc_cnt);
-void get_value(uint8_t times, int32_t * adc_cnt);
-void set_offset(int32_t * offset);
-void get_offset(int32_t * offset);
+int32_t get_average(hx_adc_cfg_t * hx_adc, uint8_t times);
+int32_t get_value(hx_adc_cfg_t * hx_adc, uint8_t times);
+void set_offset(hx_adc_cfg_t * hx_adc, int32_t  offset);
+int32_t get_offset(hx_adc_cfg_t * hx_adc);
 
 #endif // _BSP_HX_ADX_H_

@@ -9,17 +9,17 @@
 //==========================================================
 // <o> SPI_SCK_PIN - Pin number  <0-31> 
 #ifndef SPI_SCK_PIN
-#define SPI_SCK_PIN 19
+#define SPI_SCK_PIN 17
 #endif
 
 // <o> SPI_MISO_PIN - Pin number  <0-31> 
 #ifndef SPI_MISO_PIN
-#define SPI_MISO_PIN 13
+#define SPI_MISO_PIN 19
 #endif
 
 // <o> SPI_MOSI_PIN - Pin number  <0-31> 
 #ifndef SPI_MOSI_PIN
-#define SPI_MOSI_PIN 20
+#define SPI_MOSI_PIN 16
 #endif
 
 // <o> SPI_SS_PIN - Pin number  <0-31> 
@@ -56,13 +56,16 @@
 
 #define HX_ADC0_PIN 7
 #define HX_ADC1_PIN 2
+#define HX_ADC2_PIN 9
+#define HX_ADC3_PIN 5
 
 #define HX_SCK0_PIN 8
-#define HX_SCK1_PIN 5
+#define HX_SCK1_PIN 3
 #define HX_SCK2_PIN 10
 #define HX_SCK3_PIN 6
 
 #define HX_POW_PIN 12
+#define HX_ADC_NUM  4
 
 #define  FLASH_NCS_PIN     18
 #define  FLASH_WP_PIN      20

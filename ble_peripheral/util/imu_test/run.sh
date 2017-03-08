@@ -16,8 +16,9 @@ fi
 #./ezulp.py "EE:95:8F:FE:82:D9" "-S"  
 case $1 in 
     sync)
-		./dev_test.py "F9:DB:10:98:41:64" "-S"  
+		#./dev_test.py "F9:DB:10:98:41:64" "-S"  
 		#./dev_test.py "EE:95:8F:FE:82:D9" "-S"  
+		./dev_test.py "D6:D0:01:27:CA:58" "-S"  
         ;;
 	imu)
         python	motion-driver-client_lx.py "F9:DB:10:98:41:64"   

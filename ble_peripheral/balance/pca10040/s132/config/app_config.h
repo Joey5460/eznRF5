@@ -58,6 +58,20 @@
 #define  FLASH_WP_PIN      31
 #define  FLASH_HOLD_PIN    30
 
+#define HX_ADC0_PIN 7
+#define HX_ADC1_PIN 2
+#define HX_ADC2_PIN 9
+#define HX_ADC3_PIN 5
+
+#define HX_SCK0_PIN 8
+#define HX_SCK1_PIN 3
+#define HX_SCK2_PIN 10
+#define HX_SCK3_PIN 6
+
+#define HX_POW_PIN 12
+
+#define HX_ADC_NUM  4
+
 #elif defined (NSMART)
 #define  FLASH_NCS_PIN     14
 #define  FLASH_WP_PIN      12

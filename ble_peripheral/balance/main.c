@@ -1115,6 +1115,7 @@ static void advertising_start(void)
 
     APP_ERROR_CHECK(err_code);
 }
+
 /*
 static void bsp_mpu_handler(uint32_t evt )
 {
@@ -1146,9 +1147,10 @@ static void st_tx(uint8_t cur_st, uint8_t* data)
 }
 */
 #include "libraries/bsp/bsp_pwm_led.h"
-static TaskHandle_t m_states_task;         /**< Definition of Logger thread. */
-static void states_thread(void * arg)
+TaskHandle_t m_states_task;         /**< Definition of Logger thread. */
+void states_thread(void * arg)
 {
+
 /*
     UNUSED_PARAMETER(arg);
     bsp_mpu_evt_handler_set(bsp_mpu_handler);
@@ -1161,16 +1163,17 @@ static void states_thread(void * arg)
 	st_cbs.st_tx = st_tx;
 	dev_state_handler_set(&st_cbs); 
 */
-    utc_timer_init();
-    utc_timer_start();
-	hx_adc_init();
-    //bsp_mpu_init();
+ // utc_timer_init();
+ // utc_timer_start();
+
+    bsp_mpu_init();
+	hx_adc_balance_init();
     //bsp_mpu_uninit();
     NRF_LOG_INFO("States\r\n");
     while(1)
     {
         //test_run();
-        if (ST_IDLE == dev_state_run()){}
+        //if (ST_IDLE == dev_state_run()){}
         //vTaskSuspend(NULL); // Suspend myself
         vTaskDelay(10);
     }
@@ -1220,6 +1223,7 @@ int main(void)
     //get_average(10, adc_cnt);
     //set_offset(adc_cnt);
 
+    
     // Do not start any interrupt that uses system functions before system initialisation.
     // The best solution is to start the OS before any other initalisation.
 

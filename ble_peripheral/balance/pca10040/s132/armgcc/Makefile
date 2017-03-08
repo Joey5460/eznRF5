@@ -85,6 +85,7 @@ SRC_FILES += \
   $(PROJ_DIR)/libraries/eMPL/inv_mpu.c \
   $(PROJ_DIR)/libraries/eMPL/inv_mpu_dmp_motion_driver.c \
   $(PROJ_DIR)/libraries/bsp/bsp_mpu.c \
+  $(PROJ_DIR)/libraries/bsp/bsp_hx_adc.c \
   $(PROJ_DIR)/libraries/xtimers/xtimers.c \
   $(PROJ_DIR)/tasks/states/dev_states.c \
   $(PROJ_DIR)/tasks/states/st_portable.c \

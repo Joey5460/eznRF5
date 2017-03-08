@@ -4,7 +4,7 @@
 void st_mpu_active(void);
 void st_mpu_standy(void);
 void st_store_active_data(void);
-void st_read_hx_adc(uint8_t channel, int32_t *adc_val);
+int32_t st_read_hx_adc(int32_t *hx_adc_val);
 uint8_t st_sync_get_data(uint8_t * data);
 uint8_t st_sync_start(void);
 void st_sync_end(void);
