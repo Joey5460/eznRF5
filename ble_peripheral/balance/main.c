@@ -1163,8 +1163,8 @@ void states_thread(void * arg)
 	st_cbs.st_tx = st_tx;
 	dev_state_handler_set(&st_cbs); 
 */
-  utc_timer_init();
-  utc_timer_start();
+    utc_timer_init();
+    utc_timer_start();
 
     bsp_mpu_init();
 	hx_adc_balance_init();
@@ -1219,7 +1219,7 @@ int main(void)
     err_code = nrf_drv_clock_init();
     APP_ERROR_CHECK(err_code);
 
-    //bsp_pwm_led_init();
+    bsp_pwm_led_init();
 
     
     // Do not start any interrupt that uses system functions before system initialisation.
