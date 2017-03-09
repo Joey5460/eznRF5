@@ -57,6 +57,7 @@ const uint8_t sin_table[] = {
 40, 35, 29,24, 20, 16, 12, 9, 6, 4, 2,1,0
 };
 static float  _rate = 1;
+static float  _rate_r =1; 
 
 /**
  * @brief Function to be called in timer interrupt.
@@ -109,7 +110,7 @@ static void pwm_handler(void * p_context)
         */
         static uint16_t led1 = 0;
         uint32_t err_code = 0;
-        led1 += _rate;
+        led1 += _rate_r;
         led1 = led1%(sizeof(sin_table));
         err_code = low_power_pwm_duty_set(&low_power_pwm_1, sin_table[led1]);
         APP_ERROR_CHECK(err_code);
@@ -119,7 +120,6 @@ static void pwm_handler(void * p_context)
         /*empty else*/
     }
 }
-
 
 
 /**
@@ -178,8 +178,12 @@ void bsp_pwm_led_init(void)
 }
 
 
-void set_led_rate(uint8_t rate)
+void set_led_rate(uint8_t pos, uint8_t rate)
 {
-    if (rate < sizeof(sin_table)) _rate = rate;
+    if (0==pos){
+        if (rate < sizeof(sin_table)) _rate = rate;
+    }else if (1 == pos){
+        if (rate < sizeof(sin_table)) _rate_r = rate;
+    }
 }
 

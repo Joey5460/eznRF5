@@ -9,4 +9,5 @@ uint8_t st_sync_get_data(uint8_t * data);
 uint8_t st_sync_start(void);
 void st_sync_end(void);
 void st_set_hx_offset(void);
+void st_set_led_rate(uint8_t pos, uint8_t rate);
 #endif// _ST_PORT_H_
