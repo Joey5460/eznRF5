@@ -12,6 +12,7 @@ case $key in
         ;;
     b)
         vim -S ~/.vim/sessions/balance.vim
+        ;;
     *)
         ;;
 esac
