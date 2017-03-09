@@ -58,9 +58,6 @@ dev_state_t do_state_active(st_data_t *data)
         int32_t adc_val[HX_ADC_NUM]={0,0,0,0};
 
         st_read_hx_adc(adc_val);
-        //st_read_hx_adc(1, ch_b);
-        //st_get_offset(ch_b);
-
         NRF_LOG_INFO("%u, %d, %d, %d, %d\r\n",
                 get_utc(), 
                 adc_val[0],
@@ -68,7 +65,6 @@ dev_state_t do_state_active(st_data_t *data)
                 adc_val[2],
                 adc_val[3]
                 );
-
         return ST_ACTIVE;
     }
 }

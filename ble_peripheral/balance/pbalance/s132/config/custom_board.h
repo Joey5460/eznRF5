@@ -23,7 +23,7 @@ extern "C" {
 
 #define LED_START      17
 #define LED_1          30
-#define LED_2          29
+#define LED_2          25
 #define LED_3          19
 #define LED_4          20
 #define LED_STOP       20
@@ -58,11 +58,11 @@ extern "C" {
 #define BSP_BUTTON_2   BUTTON_3
 #define BSP_BUTTON_3   BUTTON_4
 
-#define RX_PIN_NUMBER  26
-#define TX_PIN_NUMBER  27
+//#define RX_PIN_NUMBER  26
+//#define TX_PIN_NUMBER  27
 //#define CTS_PIN_NUMBER 7
 //#define RTS_PIN_NUMBER 5
-#define HWFC          false 
+//#define HWFC          false 
 
 #define SPIS_MISO_PIN   28  // SPI MISO signal.
 #define SPIS_CSN_PIN    12  // SPI CSN signal.

@@ -23,8 +23,9 @@ void hx_adc_balance_init()
         {.sck = HX_SCK3_PIN, .adc = HX_ADC3_PIN},
     };
     uint8_t i = 0;
-    for (i=0;i<HX_ADC_NUM;i++)
+    for (i=0;i<HX_ADC_NUM;i++){
         hx_adc_init(&hx_adc[i]);
+    }
 }
 void hx_adc_init(hx_adc_cfg_t * hx_adc)
 {

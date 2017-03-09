@@ -10,6 +10,9 @@ case $key in
     le)
 		vim -S ~/.vim/sessions/ezle.vim
         ;;
+    b)
+        vim -S ~/.vim/sessions/balance.vim
+        ;;
     *)
         ;;
 esac

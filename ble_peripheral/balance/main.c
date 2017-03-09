@@ -1163,8 +1163,8 @@ void states_thread(void * arg)
 	st_cbs.st_tx = st_tx;
 	dev_state_handler_set(&st_cbs); 
 */
- // utc_timer_init();
- // utc_timer_start();
+  utc_timer_init();
+  utc_timer_start();
 
     bsp_mpu_init();
 	hx_adc_balance_init();
