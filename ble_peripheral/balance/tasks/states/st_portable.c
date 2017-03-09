@@ -101,22 +101,29 @@ void st_store_active_data(void)
 }
 
 static hx_adc_cfg_t  hx_adc[HX_ADC_NUM]={
-    {.sck = HX_SCK0_PIN, .adc = HX_ADC0_PIN, .gain=1},
-    {.sck = HX_SCK1_PIN, .adc = HX_ADC1_PIN, .gain=1},
-    {.sck = HX_SCK2_PIN, .adc = HX_ADC2_PIN, .gain=1},
-    {.sck = HX_SCK3_PIN, .adc = HX_ADC3_PIN, .gain=1},
+    {.sck = HX_SCK0_PIN, .adc = HX_ADC0_PIN, .gain=1, .offset = 0},
+    {.sck = HX_SCK1_PIN, .adc = HX_ADC1_PIN, .gain=1, .offset = 0},
+    {.sck = HX_SCK2_PIN, .adc = HX_ADC2_PIN, .gain=1, .offset = 0},
+    {.sck = HX_SCK3_PIN, .adc = HX_ADC3_PIN, .gain=1, .offset = 0},
 };
 
 int32_t st_read_hx_adc(int32_t *hx_adc_val)
 {
     uint8_t i = 0;
     for (i=0; i<HX_ADC_NUM;i++){
-        hx_adc_val[i] = read_hx_adc(&hx_adc[i]);
+        //hx_adc_val[i] = read_hx_adc(&hx_adc[i]);
+        hx_adc_val[i] = get_value(&hx_adc[i], 2);
     }
     return 0; 
 }
 
-void st_get_offset(int32_t * adc_val)
+void st_set_hx_offset(void)
 {
-    //get_offset(adc_val);
+
+    uint8_t i = 0;
+    for (i=0; i<HX_ADC_NUM; i++){
+        //int32_t offset = get_average(&hx_adc[i], 20);
+		NRF_LOG_INFO("offeset: %d \r\n",hx_adc[i].offset);
+        //set_offset(&hx_adc[i], offset);
+    }
 }

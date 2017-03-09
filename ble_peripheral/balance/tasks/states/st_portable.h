@@ -8,5 +8,5 @@ int32_t st_read_hx_adc(int32_t *hx_adc_val);
 uint8_t st_sync_get_data(uint8_t * data);
 uint8_t st_sync_start(void);
 void st_sync_end(void);
-void st_get_offset(int32_t * adc_val);
+void st_set_hx_offset(void);
 #endif// _ST_PORT_H_

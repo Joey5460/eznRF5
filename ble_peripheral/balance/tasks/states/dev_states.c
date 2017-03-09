@@ -162,13 +162,14 @@ void dev_state_init(dev_state_handlers_t * cb)
     uint32_t err_code;
     err_code = app_fifo_init(&st_msg_fifo, msg_buf, MSG_BUF_SIZE);
     APP_ERROR_CHECK(err_code);
+    st_set_hx_offset();
+    NRF_LOG_INFO("stat init\r\n");
 }
 
 dev_state_t dev_state_run(void) 
 {
     uint8_t p_byte;
     if (NRF_SUCCESS == app_fifo_get(&st_msg_fifo, &p_byte)){
-
         _inst_data.evt = p_byte;
         NRF_LOG_INFO("Get FIFO %u\r\n", _inst_data.evt);
 

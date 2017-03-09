@@ -1169,11 +1169,12 @@ void states_thread(void * arg)
     bsp_mpu_init();
 	hx_adc_balance_init();
     //bsp_mpu_uninit();
+    dev_state_init(0);
     NRF_LOG_INFO("States\r\n");
     while(1)
     {
         //test_run();
-        //if (ST_IDLE == dev_state_run()){}
+        if (ST_IDLE == dev_state_run()){}
         //vTaskSuspend(NULL); // Suspend myself
         vTaskDelay(10);
     }
@@ -1219,9 +1220,6 @@ int main(void)
     APP_ERROR_CHECK(err_code);
 
     //bsp_pwm_led_init();
-    //int32_t  adc_cnt[2];
-    //get_average(10, adc_cnt);
-    //set_offset(adc_cnt);
 
     
     // Do not start any interrupt that uses system functions before system initialisation.

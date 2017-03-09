@@ -25,7 +25,6 @@ void hx_adc_balance_init()
     uint8_t i = 0;
     for (i=0;i<HX_ADC_NUM;i++)
         hx_adc_init(&hx_adc[i]);
-
 }
 void hx_adc_init(hx_adc_cfg_t * hx_adc)
 {
@@ -121,7 +120,6 @@ int32_t read_hx_adc(hx_adc_cfg_t * hx_adc)
 
 	return adc_val;
 }
-
 
 int32_t get_average(hx_adc_cfg_t * hx_adc, uint8_t times)
 {
