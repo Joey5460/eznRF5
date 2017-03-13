@@ -4,7 +4,8 @@
 # A PC application for use with Motion Driver.
 # Copyright 2012 InvenSense, Inc. All Rights Reserved.
 
-import serial, sys, time, string, pygame
+#import serial
+import sys, time, string, pygame
 from ponycube import *
 
 # Sensor sensitivities
