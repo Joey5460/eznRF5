@@ -3,7 +3,7 @@ from bluepy.btle import UUID, Peripheral, DefaultDelegate
 import struct
 import math
 from collections import deque
-import serial, sys, time, string, pygame
+#import serial, sys, time, string, pygame
 
 
 def _TI_UUID(val):
@@ -47,57 +47,6 @@ class SmartTag(Peripheral):
         self.sync = Sync(self)
         print "geting services"
 
-class MovementSensor(SensorBase):
-    svcUUID  = UUID(0xFA00)
-    dataUUID = UUID(0xFA04)
-    ctrlUUID = UUID(0xFA03)
-
-    def __init__(self, periph):
-        SensorBase.__init__(self, periph)
-
-    def enable(self):
-        if self.service is None:
-            self.periph.writeCharacteristic(49, struct.pack('<bb', 0x01, 0x00))
-            #for uuids,val in  (self.periph.discoverServices()):
-            #print type(self.periph.discoverServices())
-                #print ("srv: ",srv)
-            srvs = self.periph.discoverServices()
-            #    print (UUID(0xFA00))
-            uuid = UUID(0xFA00)
-            self.service = srvs[uuid]
-
-            print srvs[uuid]
-
-            #self.service = self.periph.getServiceByUUID(self.svcUUID)
-        if self.ctrl is None:
-            self.ctrl = self.service.getCharacteristics(self.ctrlUUID) [0]
-        if self.data is None:
-            self.data = self.service.getCharacteristics(self.dataUUID) [0]
-        if self.sensorOn is not None:
-            self.ctrl.write(self.sensorOn,withResponse=True)
-
-    def read(self):
-        '''Returns (x_accel, y_accel, z_accel) in units of g'''
-        x_y_z = struct.unpack('HHHHHHHHHH', self.data.read())
-        return tuple([ (val) for val in x_y_z ])
-
-class MovementDelegate(DefaultDelegate):
-    def __init__(self):
-        DefaultDelegate.__init__(self)
-        self.d_movement = deque()
-
-    def handleNotification(self, hnd, data):
-        # NB: only one source of notifications at present
-        # so we can ignore 'hnd'.
-        data =  struct.unpack('HHhhhhhHHH', data)
-        ls = [(data[0] + data[1]*256*256), (data[2], data[3], data[4]),(data[6],data[7], data[8])]
-        with open ('up.dat', 'a+') as fd:
-            print ls[0], data[2]/100.0,data[3]/100.0,data[4]/100.0  
-            print>>fd, data[3]/100.0, data[4]/100.0, data[5]/100.0, data[6]/100.0, (math.atan2(data[3],data[5])*57.3+180)%360
-        self.d_movement.append(ls)
-    def get_deque(self):
-        return self.d_movement
-
 class Sync(SensorBase):
     def __init__(self, periph):
         SensorBase.__init__(self, periph)
@@ -133,12 +82,16 @@ class SyncDelegate(DefaultDelegate):
         data_ex =  struct.unpack('BBBBBBBBBBBBBBBBBBBB', data)
         print "sync:",":".join("{:02x}".format(c) for c in data_ex) 
 	newFileByteArray = bytearray(data[4:])
-	self.fd_sync.write(newFileByteArray)
 	if (0x20 == data_ex[1]):
             print "sync done"
 	    self.fd_sync.close()
             sync_clear  = struct.pack("B", 0x02)
             tag.sync.write(sync_clear)
+            tag.disconnect()
+            #del tag
+            sys.exit(1)
+        else:
+            self.fd_sync.write(newFileByteArray)
         #self.sync_deque.append(data)
 
     def get_deque(self):
@@ -181,21 +134,21 @@ if __name__ == "__main__":
     # Some sensors (e.g., temperature, accelerometer) need some time for initialization.
     # Not waiting here after enabling a sensor, the first read value might be empty or incorrect.
     #time.sleep(1.0)
-    pygame.init()
+    #pygame.init()
     while True:
        #tag.waitForNotifications(arg.t)
-	event = pygame.event.poll()
+	#event = pygame.event.poll()
         # TODO: Allow exit via keystroke.
-        if event.type == pygame.QUIT:
-            viewer.close()
-            break
-        if event.type == pygame.KEYDOWN:
+        #if event.type == pygame.QUIT:
+            #viewer.close()
+            #break
+        #if event.type == pygame.KEYDOWN:
             #reader.write(pygame.key.name(event.key))
-            if 'p' == pygame.key.name(event.key):
+            #if 'p' == pygame.key.name(event.key):
                 #viewer.close()
-                tag.disconnect()
-                del tag
-                sys.exit(-1)
+                #tag.disconnect()
+                #del tag
+                #sys.exit(-1)
 	tag.waitForNotifications(0.02)
 
 
