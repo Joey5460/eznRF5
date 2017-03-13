@@ -9,7 +9,7 @@ case $1 in
         python test_sync.py "F9:DB:10:98:41:64" "-S"
         ;;
 	imu)
-        python	motion-driver-client/motion-driver-client_lx.py "F9:DB:10:98:41:64" 
+        python	test_imu/motion-driver-client_lx.py "F9:DB:10:98:41:64" 
 		;;
     scan)
         gatttool -i hci1 -b "F9:DB:10:98:41:64" -t random -I
