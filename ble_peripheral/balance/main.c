@@ -52,6 +52,7 @@
 #include "libraries/bsp/bsp_mpu.h"
 #include "libraries/bsp/bsp_hx_adc.h"
 #include "ble_services/ble_syncs/ble_syncs.h"
+#include "ble_services/ble_trxs/ble_trxs.h"
 #include "libraries/log/log.h"
 #include "xtimers.h"
 
@@ -122,6 +123,7 @@ static uint16_t  m_conn_handle = BLE_CONN_HANDLE_INVALID; /**< Handle of the cur
 static ble_bas_t m_bas;                                   /**< Structure used to identify the battery service. */
 static ble_hrs_t m_hrs;                                   /**< Structure used to identify the heart rate service. */
 static ble_sync_t  m_sync;
+static ble_trx_t  m_trx;
 static bool      m_rr_interval_enabled = true;            /**< Flag for enabling and disabling the registration of new RR interval measurements (the purpose of disabling this is just to test sending HRM without RR interval data. */
 
 static sensorsim_cfg_t   m_battery_sim_cfg;               /**< Battery Level sensor simulator configuration. */
@@ -496,8 +498,22 @@ static void setting_write_callback(ble_sync_t * p_sync, uint8_t* data )
         utc_s = (utc_s<<8) + data[3];
         utc_s = (utc_s<<8) + data[2];
         utc_s = (utc_s<<8) + data[1];
-//        app_trace_log("\r\nutc %u \r\n", utc_s);
 //        set_utc(utc_s);
+    }
+
+}
+
+static void trx_cmd_callback(ble_trx_t * p_trx, uint8_t * cmd)
+{
+    uint16_t  c = cmd[0] + (cmd[1]<<8);
+    switch(c){
+        case 0x00:
+			NRF_LOG_INFO("TRX CMD 0x00");
+            break;
+        case 0x01:
+            break;
+        default:
+            break;
     }
 
 }
@@ -572,6 +588,14 @@ static void services_init(void)
     sync_init.test_write_handler = test_write_callback;
     sync_init.setting_write_handler = setting_write_callback;
     err_code = ble_sync_init(&m_sync, &sync_init);
+    APP_ERROR_CHECK(err_code);
+
+    // Initialize Transmission Service.
+	ble_trx_init_t trx_init; 
+    memset(&trx_init, 0, sizeof(trx_init));
+    trx_init.cmd_write_handler = trx_cmd_callback;
+
+    err_code = ble_trx_init(&m_trx, &trx_init);
     APP_ERROR_CHECK(err_code);
 
 }
@@ -848,6 +872,7 @@ static void ble_evt_dispatch(ble_evt_t * p_ble_evt)
     ble_advertising_on_ble_evt(p_ble_evt);
 
 	ble_sync_on_ble_evt(&m_sync, p_ble_evt);
+	ble_trx_on_ble_evt(&m_trx, p_ble_evt);
 }
 
 

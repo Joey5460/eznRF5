@@ -67,11 +67,11 @@ dev_state_t do_state_active(st_data_t *data)
        }else if((lt-rt)<-30){
          st_set_led_rate(0, 5);
          st_set_led_rate(1, 1);
-       }else {
+       }else{
          st_set_led_rate(0, 1);
          st_set_led_rate(1, 1);
-       
        }
+       /*
         NRF_LOG_INFO("%u, %d, %d, %d, %d\r\n",
                 get_utc(), 
                 adc_val[0],
@@ -79,6 +79,7 @@ dev_state_t do_state_active(st_data_t *data)
                 adc_val[2],
                 adc_val[3]
                 );
+        */
         return ST_ACTIVE;
     }
 }

@@ -33,8 +33,8 @@
  *       module by calling ble_lbs_on_ble_evt() from the @ref softdevice_handler callback.
 */
 
-#ifndef BLE_IMU_H__
-#define BLE_IMU_H__
+#ifndef BLE_TRX_H__
+#define BLE_TRX_H__
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -48,16 +48,17 @@
                               0x00, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}
 //#define IMU_UUID_SERVICE     0x1523
 #define IMU_UUID_SERVICE     0xFA00
-#define IMU_UUID_MOV_CHAR    0xFA02
+#define IMU_UUID_TRX_CHAR    0xFA02
 #define IMU_UUID_CMD_CHAR    0xFA01
 
 #define IMU_TRX_CHAR_SIZE    20    
-#define IMU_CMD_CHAR_SIZE    sizeof(uint8_t)
+#define IMU_CMD_CHAR_SIZE    sizeof(uint32_t)
 
 // Forward declaration of the ble_trx_t type.
 typedef struct ble_trx_s ble_trx_t;
 
-typedef void (*ble_cmd_write_handler_t) (ble_trx_t * p_trx, uint8_t value);
+typedef void (*ble_cmd_write_handler_t) (ble_trx_t * p_trx, uint8_t* value);
+
 
 /** @brief LED Button Service init structure. This structure contains all options and data needed for
  *        initialization of the service.*/
@@ -102,8 +103,7 @@ void ble_trx_on_ble_evt(ble_trx_t * p_trx, ble_evt_t * p_ble_evt);
 
 uint32_t ble_trx_update(ble_trx_t * p_trx, uint8_t *data);
 
-uint32_t ble_but_update(ble_trx_t * p_trx, uint8_t *data);
 
-#endif // BLE_IMU_H__
+#endif // BLE_TRX_H__
 
-/** @} */t
+/** @} */

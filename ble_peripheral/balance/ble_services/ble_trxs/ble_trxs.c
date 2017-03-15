@@ -10,7 +10,7 @@
 #include "ble_srv_common.h"
 #include "app_util.h"
 #include "app_error.h"
-#include "app_trace.h"
+//#include "app_trace.h"
 
 /**@brief Function for handling the Connect event.
  *
@@ -45,14 +45,11 @@ static void on_write(ble_trx_t * p_trx, ble_evt_t * p_ble_evt)
     ble_gatts_evt_write_t * p_evt_write = &p_ble_evt->evt.gatts_evt.params.write;
 
     if ((p_evt_write->handle == p_trx->cmd_char_handles.value_handle) &&
-            (p_evt_write->len == 1) &&
+            (p_evt_write->len <= IMU_CMD_CHAR_SIZE) &&
             (p_trx->cmd_write_handler != NULL))
     {
-        p_trx->cmd_write_handler(p_trx, p_evt_write->data[0]);
+        p_trx->cmd_write_handler(p_trx, p_evt_write->data);
     }
-
-
-
 }
 
 void ble_trx_on_ble_evt(ble_trx_t * p_trx, ble_evt_t * p_ble_evt)
@@ -109,7 +106,7 @@ static uint32_t trx_char_add(ble_trx_t * p_trx)
     char_md.p_sccd_md         = NULL;
 
     ble_uuid.type = p_trx->uuid_type;
-    ble_uuid.uuid = IMU_UUID_MOV_CHAR;
+    ble_uuid.uuid = IMU_UUID_TRX_CHAR;
 
     memset(&attr_md, 0, sizeof(attr_md));
 
@@ -124,15 +121,15 @@ static uint32_t trx_char_add(ble_trx_t * p_trx)
 
     attr_char_value.p_uuid    = &ble_uuid;
     attr_char_value.p_attr_md = &attr_md;
-    attr_char_value.init_len  = IMU_MOV_CHAR_SIZE;
+    attr_char_value.init_len  = IMU_TRX_CHAR_SIZE;
     attr_char_value.init_offs = 0;
-    attr_char_value.max_len   = IMU_MOV_CHAR_SIZE;
+    attr_char_value.max_len   = IMU_TRX_CHAR_SIZE;
     attr_char_value.p_value   = NULL;
 
     return sd_ble_gatts_characteristic_add(p_trx->service_handle,
             &char_md,
             &attr_char_value,
-            &p_trx->mov_char_handles);
+            &p_trx->trx_char_handles);
 }
 
 static uint32_t cmd_char_add(ble_trx_t * p_trx)
@@ -237,10 +234,10 @@ uint32_t ble_trx_update(ble_trx_t * p_trx, uint8_t *data)
 
     memset(&params, 0, sizeof(ble_gatts_hvx_params_t));
 
-    params.handle = p_trx->mov_char_handles.value_handle;
+    params.handle = p_trx->trx_char_handles.value_handle;
     params.type   = BLE_GATT_HVX_NOTIFICATION;
     params.p_data = data;
-    uint16_t size  = IMU_MOV_CHAR_SIZE;
+    uint16_t size  = IMU_TRX_CHAR_SIZE;
     params.p_len  = &size;
 
     uint32_t err_code = 0;
@@ -249,23 +246,3 @@ uint32_t ble_trx_update(ble_trx_t * p_trx, uint8_t *data)
     return err_code;
 }
 
-uint32_t ble_but_update(ble_trx_t * p_trx, uint8_t *data)
-{
-    if (BLE_CONN_HANDLE_INVALID == p_trx->conn_handle)
-        return NRF_ERROR_INVALID_STATE;
-
-    ble_gatts_hvx_params_t params;
-
-    memset(&params, 0, sizeof(ble_gatts_hvx_params_t));
-
-    params.handle = p_trx->but_char_handles.value_handle;
-    params.type   = BLE_GATT_HVX_NOTIFICATION;
-    params.p_data = data;
-    uint16_t size  = IMU_BUT_CHAR_SIZE;
-    params.p_len  = &size;
-
-    uint32_t err_code = 0;
-    err_code = sd_ble_gatts_hvx(p_trx->conn_handle, &params);
-
-    return err_code;
-}

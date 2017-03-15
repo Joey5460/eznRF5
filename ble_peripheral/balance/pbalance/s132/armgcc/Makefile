@@ -91,6 +91,7 @@ SRC_FILES += \
   $(PROJ_DIR)/tasks/states/dev_states.c \
   $(PROJ_DIR)/tasks/states/st_portable.c \
   $(PROJ_DIR)/ble_services/ble_syncs/ble_syncs.c \
+  $(PROJ_DIR)/ble_services/ble_trxs/ble_trxs.c \
   $(SDK_ROOT)/components/libraries/fifo/app_fifo.c \
   $(SDK_ROOT)/components/drivers_nrf/spi_master/nrf_drv_spi.c \
   $(SDK_ROOT)/components/drivers_nrf/twi_master/nrf_drv_twi.c \
