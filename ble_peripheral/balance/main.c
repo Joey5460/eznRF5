@@ -69,7 +69,7 @@
 #define CENTRAL_LINK_COUNT               0                                /**< Number of central links used by the application. When changing this number remember to adjust the RAM settings*/
 #define PERIPHERAL_LINK_COUNT            1                                /**< Number of peripheral links used by the application. When changing this number remember to adjust the RAM settings*/
 
-#define DEVICE_NAME                      "nSmart-"                     /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                      "balance"                     /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                "NordicSemiconductor"            /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                 300                              /**< The advertising interval (in units of 0.625 ms. This value corresponds to 187.5 ms). */
 #define APP_ADV_TIMEOUT_IN_SECONDS       180                              /**< The advertising time-out in units of seconds. */
@@ -94,8 +94,8 @@
 
 #define SENSOR_CONTACT_DETECTED_INTERVAL 5000                             /**< Sensor Contact Detected toggle interval (ms). */
 
-#define MIN_CONN_INTERVAL                MSEC_TO_UNITS(400, UNIT_1_25_MS) /**< Minimum acceptable connection interval (0.4 seconds). */
-#define MAX_CONN_INTERVAL                MSEC_TO_UNITS(650, UNIT_1_25_MS) /**< Maximum acceptable connection interval (0.65 second). */
+#define MIN_CONN_INTERVAL                MSEC_TO_UNITS(100, UNIT_1_25_MS) /**< Minimum acceptable connection interval (0.4 seconds). */
+#define MAX_CONN_INTERVAL                MSEC_TO_UNITS(200, UNIT_1_25_MS) /**< Maximum acceptable connection interval (0.65 second). */
 #define SLAVE_LATENCY                    0                                /**< Slave latency. */
 #define CONN_SUP_TIMEOUT                 MSEC_TO_UNITS(4000, UNIT_10_MS)  /**< Connection supervisory time-out (4 seconds). */
 
@@ -1086,6 +1086,30 @@ void buttons_leds_init(bool * p_erase_bonds)
     *p_erase_bonds = (startup_event == BSP_EVENT_CLEAR_BONDING_DATA);
 }
 
+static void st_tx(uint8_t cur_st, uint8_t* data)
+{
+	if (ST_SYNC == cur_st){
+
+	}else if (ST_CONN == cur_st){
+		uint32_t err_code = 0; 
+		ble_tx_done = false;
+		err_code = ble_trx_update(&m_trx, data);
+
+		if (err_code == BLE_ERROR_NO_TX_PACKETS){
+
+			while(false == ble_tx_done){}
+
+		}else if ((err_code != NRF_SUCCESS) &&
+				(err_code != NRF_ERROR_INVALID_STATE) &&
+				(err_code != BLE_ERROR_GATTS_SYS_ATTR_MISSING)
+				){
+
+			APP_ERROR_CHECK(err_code);
+		}
+	}
+
+}
+
 
 /**@brief Thread for handling the Application's BLE Stack events.
  *
@@ -1150,27 +1174,8 @@ static void bsp_mpu_handler(uint32_t evt )
             break;
     }
 }
-
-static void st_tx(uint8_t cur_st, uint8_t* data)
-{
-	if (ST_SYNC == cur_st){
-		uint32_t err_code = 0; 
-		err_code = ble_sync_log_update(&m_sync, data);
-		ble_tx_done = false;
-		if (err_code == BLE_ERROR_NO_TX_PACKETS){
-			while(false == ble_tx_done){}
-
-		}else if ((err_code != NRF_SUCCESS) &&
-				(err_code != NRF_ERROR_INVALID_STATE) &&
-				(err_code != BLE_ERROR_GATTS_SYS_ATTR_MISSING)
-				){   
-			APP_ERROR_CHECK(err_code);
-		}    
-	}else if (ST_CONN == cur_st){
-
-	} 
-}
 */
+
 #include "libraries/bsp/bsp_pwm_led.h"
 TaskHandle_t m_states_task;         /**< Definition of Logger thread. */
 void states_thread(void * arg)
@@ -1180,13 +1185,6 @@ void states_thread(void * arg)
     UNUSED_PARAMETER(arg);
     bsp_mpu_evt_handler_set(bsp_mpu_handler);
     log_init();
-    utc_timer_init();
-    utc_timer_start();
-
-    dev_state_init(0);
-	dev_state_handlers_t st_cbs;
-	st_cbs.st_tx = st_tx;
-	dev_state_handler_set(&st_cbs); 
 */
     utc_timer_init();
     utc_timer_start();
@@ -1195,6 +1193,9 @@ void states_thread(void * arg)
 	hx_adc_balance_init();
     //bsp_mpu_uninit();
     dev_state_init(0);
+	dev_state_handlers_t st_cbs;
+	st_cbs.st_tx = st_tx;
+	dev_state_handler_set(&st_cbs); 
     NRF_LOG_INFO("States\r\n");
     while(1)
     {

@@ -590,7 +590,6 @@ static void services_init(void)
     err_code = ble_imu_init(&m_imu, &imu_init);
     APP_ERROR_CHECK(err_code);
 
-
 }
 
 

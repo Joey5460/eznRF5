@@ -11,6 +11,9 @@ case $1 in
 	imu)
         python	motion-driver-client/motion-driver-client_lx.py "F9:DB:10:98:41:64" 
 		;;
+	hx)
+        python	test_hx.py "F4:FB:F2:80:91:2E" "--hx" 
+		;;
     scan)
         gatttool -i hci1 -b "F9:DB:10:98:41:64" -t random -I
         ;;

@@ -53,9 +53,7 @@ dev_state_t do_state_active(st_data_t *data)
             NRF_LOG_INFO("active state \r\n");
         }
         
-        //st_store_active_data();
-
-        int32_t adc_val[HX_ADC_NUM]={0,0,0,0};
+     int32_t adc_val[HX_ADC_NUM]={0,0,0,0};
 
         st_read_hx_adc(adc_val);
         int32_t rt = adc_val[0]+ adc_val[2];
@@ -80,7 +78,9 @@ dev_state_t do_state_active(st_data_t *data)
                 adc_val[3]
                 );
         */
-        return ST_ACTIVE;
+        //st_store_active_data();
+
+       return ST_ACTIVE;
     }
 }
 
@@ -103,6 +103,38 @@ dev_state_t do_state_connected(st_data_t *data)
             is_set = 1;
             NRF_LOG_INFO("connected state \r\n");
         }
+
+        int32_t adc_val[HX_ADC_NUM]={0,0,0,0};
+
+        st_read_hx_adc(adc_val);
+        int32_t rt = adc_val[0]+ adc_val[2];
+        int32_t lt = adc_val[1]+ adc_val[3];
+        //0,2 right led
+       if ((rt-lt)< -30) {
+         st_set_led_rate(1, 5);
+         st_set_led_rate(0, 1);
+       }else if((lt-rt)<-30){
+         st_set_led_rate(0, 5);
+         st_set_led_rate(1, 1);
+       }else{
+         st_set_led_rate(0, 1);
+         st_set_led_rate(1, 1);
+       }
+        NRF_LOG_INFO("%u, %d, %d, %d, %d\r\n",
+                get_utc(), 
+                adc_val[0],
+                adc_val[1],
+                adc_val[2],
+                adc_val[3]
+                );
+        int32_t pack_data[HX_ADC_NUM+1] = {0x01, 
+                                        adc_val[0],
+                                        adc_val[1],
+                                        adc_val[2],
+                                        adc_val[3]
+                                      };
+        if(_st_tx) _st_tx(_cur_state, (uint8_t*)pack_data);
+
         return ST_CONN;
     }
 }

@@ -121,10 +121,12 @@ void st_set_hx_offset(void)
 {
     uint8_t i = 0;
     for (i=0; i<HX_ADC_NUM; i++){
+        //ignore init value
         read_hx_adc(_hx_adc);
         read_hx_adc(_hx_adc);
         read_hx_adc(_hx_adc);
-        int32_t offset = get_average(&_hx_adc[i], 10);
+        read_hx_adc(_hx_adc);
+        int32_t offset = get_average(&_hx_adc[i], 20);
         set_offset(&_hx_adc[i], offset);
 		NRF_LOG_INFO("offeset: %d \r\n",_hx_adc[i].offset);
     }
