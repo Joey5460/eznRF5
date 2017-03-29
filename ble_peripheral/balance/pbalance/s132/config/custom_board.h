@@ -18,26 +18,28 @@ extern "C" {
 
 #include "nrf_gpio.h"
 
-// LEDs definitions for PCA10040
-#define LEDS_NUMBER    4
+// LEDs definitions for balance borad
+#define LEDS_NUMBER    6
 
-#define LED_START      17
-#define LED_1          30
+#define LED_1          29
 #define LED_2          25
-#define LED_3          19
-#define LED_4          20
-#define LED_STOP       20
+#define LED_3          30
+#define LED_4          26
+#define LED_5          31
+#define LED_6          27
    
 #define LEDS_ACTIVE_STATE 0
 
 #define LEDS_INV_MASK  LEDS_MASK
 
-#define LEDS_LIST { LED_1, LED_2, LED_3, LED_4 }
+#define LEDS_LIST { LED_1, LED_2, LED_3, LED_4, LED_5, LED_6}
 
 #define BSP_LED_0      LED_1
 #define BSP_LED_1      LED_2
 #define BSP_LED_2      LED_3
 #define BSP_LED_3      LED_4
+#define BSP_LED_4      LED_5
+#define BSP_LED_5      LED_6
 
 #define BUTTONS_NUMBER 4
 

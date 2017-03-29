@@ -75,7 +75,7 @@
 #define APP_ADV_TIMEOUT_IN_SECONDS       180                              /**< The advertising time-out in units of seconds. */
 
 #define APP_TIMER_PRESCALER              0                                /**< Value of the RTC1 PRESCALER register. */
-#define APP_TIMER_OP_QUEUE_SIZE          9                                /**< Size of timer operation queues. */
+#define APP_TIMER_OP_QUEUE_SIZE          20                                /**< Size of timer operation queues. */
 
 #define BATTERY_LEVEL_MEAS_INTERVAL      2000                             /**< Battery level measurement interval (ms). */
 #define MIN_BATTERY_LEVEL                81                               /**< Minimum simulated battery level. */

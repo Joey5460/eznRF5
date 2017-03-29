@@ -41,9 +41,12 @@ APP_TIMER_DEF(m_leds_timer_id);
 #define TICKS_BEFORE_CHANGE_0   500
 #define TICKS_BEFORE_CHANGE_1   400
 
-static low_power_pwm_t low_power_pwm_0;
-static low_power_pwm_t low_power_pwm_1;
-static low_power_pwm_t low_power_pwm_2;
+static low_power_pwm_t low_power_pwm[LEDS_NUMBER];
+//static low_power_pwm_t low_power_pwm_1;
+//static low_power_pwm_t low_power_pwm_2;
+//static low_power_pwm_t low_power_pwm_3;
+//static low_power_pwm_t low_power_pwm_4;
+//static low_power_pwm_t low_power_pwm_5;
 const uint8_t sin_table[] = {
 0, 0,1,2,4,6,9,12,16,20,24,29,35,40,	
 46,	53,	59,	66,	74,	81,	88,	96,	104,
@@ -56,9 +59,11 @@ const uint8_t sin_table[] = {
 112,104,96,88,81,74,66,59, 53, 46, 
 40, 35, 29,24, 20, 16, 12, 9, 6, 4, 2,1,0
 };
-static float  _rate = 1;
-static float  _rate_r =1; 
+static uint8_t  _rate = 1;
+static uint8_t  _rate_r =1; 
 
+static uint8_t  _color_l = 1;
+static uint8_t  _color_r = 1; 
 /**
  * @brief Function to be called in timer interrupt.
  *
@@ -66,57 +71,56 @@ static float  _rate_r =1;
  */
 static void pwm_handler(void * p_context)
 {
-    //uint8_t new_duty_cycle;
-    //static uint16_t led_0; 
-    //static uint16_t led_1;
-    //uint32_t err_code;
     UNUSED_PARAMETER(p_context);
 
     low_power_pwm_t * pwm_instance = (low_power_pwm_t*)p_context;
 
+    static uint16_t led0 = 0;
+    static uint16_t led1 = 0;
+    uint32_t err_code = 0;
     if (pwm_instance->bit_mask == BSP_LED_0_MASK)
     {
-        static uint16_t led0 = 0;
-        uint32_t err_code = 0;
         led0 += _rate;
         led0 = led0%(sizeof(sin_table));
-        err_code = low_power_pwm_duty_set(&low_power_pwm_0, sin_table[led0]);
+        err_code = low_power_pwm_duty_set(&low_power_pwm[0], sin_table[led0]);
+        //err_code = low_power_pwm_duty_set(&low_power_pwm_2, 0);
+        //err_code = low_power_pwm_duty_set(&low_power_pwm_4, 0);
         APP_ERROR_CHECK(err_code);
 
-        /*
-        led_0++;
-
-        if (led_0 > TICKS_BEFORE_CHANGE_0)
-        {
-            new_duty_cycle = pwm_instance->period - pwm_instance->duty_cycle;
-            err_code = low_power_pwm_duty_set(pwm_instance, new_duty_cycle);
-            led_0 = 0;
-            APP_ERROR_CHECK(err_code);
-        }
-        */
-        //_run();
-    }
-    else if (pwm_instance->bit_mask == BSP_LED_1_MASK)
-    {/*
-        led_1++;
-
-        if (led_1 > TICKS_BEFORE_CHANGE_1)
-        {
-            new_duty_cycle = pwm_instance->period - pwm_instance->duty_cycle;
-            err_code = low_power_pwm_duty_set(pwm_instance, new_duty_cycle);
-            led_1 = 0;
-            APP_ERROR_CHECK(err_code);
-        }
-        */
-        static uint16_t led1 = 0;
-        uint32_t err_code = 0;
+    } else if (pwm_instance->bit_mask == BSP_LED_1_MASK) {
         led1 += _rate_r;
         led1 = led1%(sizeof(sin_table));
-        err_code = low_power_pwm_duty_set(&low_power_pwm_1, sin_table[led1]);
+        err_code = low_power_pwm_duty_set(&low_power_pwm[1], sin_table[led1]);
+        //err_code = low_power_pwm_duty_set(&low_power_pwm_3, 0);
+        //err_code = low_power_pwm_duty_set(&low_power_pwm_5, 0);
         APP_ERROR_CHECK(err_code);
-    }
-    else
-    {
+    }else if (pwm_instance->bit_mask == BSP_LED_2_MASK){
+        led0 += _rate;
+        led0 = led0%(sizeof(sin_table));
+        err_code = low_power_pwm_duty_set(&low_power_pwm[2], sin_table[led0]);
+        //err_code = low_power_pwm_duty_set(&low_power_pwm_0, 0);
+        //err_code = low_power_pwm_duty_set(&low_power_pwm_4, 0);
+        APP_ERROR_CHECK(err_code);
+    }else if (pwm_instance->bit_mask == BSP_LED_3_MASK){
+        led1 += _rate_r;
+        led1 = led1%(sizeof(sin_table));
+        err_code = low_power_pwm_duty_set(&low_power_pwm[3], sin_table[led1]);
+        //err_code = low_power_pwm_duty_set(&low_power_pwm_1, 0);
+        //err_code = low_power_pwm_duty_set(&low_power_pwm_5, 0);
+        APP_ERROR_CHECK(err_code);
+    }else if (pwm_instance->bit_mask == BSP_LED_4_MASK){
+        led0 += _rate;
+        led0 = led0%(sizeof(sin_table));
+        err_code = low_power_pwm_duty_set(&low_power_pwm[4], sin_table[led0]);
+        APP_ERROR_CHECK(err_code);
+
+    }else if (pwm_instance->bit_mask == BSP_LED_5_MASK){
+        led1 += _rate_r;
+        led1 = led1%(sizeof(sin_table));
+        err_code = low_power_pwm_duty_set(&low_power_pwm[5], sin_table[led1]);
+        APP_ERROR_CHECK(err_code);
+    }else {
+ 
         /*empty else*/
     }
 }
@@ -139,9 +143,9 @@ void bsp_pwm_led_init(void)
     low_power_pwm_config.p_timer_id     = &lpp_timer_0;
     low_power_pwm_config.p_port         = NRF_GPIO;
 
-    err_code = low_power_pwm_init((&low_power_pwm_0), &low_power_pwm_config, pwm_handler);
+    err_code = low_power_pwm_init((&low_power_pwm[0]), &low_power_pwm_config, pwm_handler);
     APP_ERROR_CHECK(err_code);
-    err_code = low_power_pwm_duty_set(&low_power_pwm_0, 20);
+    err_code = low_power_pwm_duty_set(&low_power_pwm[0], 20);
     APP_ERROR_CHECK(err_code);
 
     APP_TIMER_DEF(lpp_timer_1);
@@ -151,30 +155,73 @@ void bsp_pwm_led_init(void)
     low_power_pwm_config.p_timer_id     = &lpp_timer_1;
     low_power_pwm_config.p_port         = NRF_GPIO;
 
-    err_code = low_power_pwm_init((&low_power_pwm_1), &low_power_pwm_config, pwm_handler);
+    err_code = low_power_pwm_init((&low_power_pwm[1]), &low_power_pwm_config, pwm_handler);
     APP_ERROR_CHECK(err_code);
-    err_code = low_power_pwm_duty_set(&low_power_pwm_1, 150);
+    err_code = low_power_pwm_duty_set(&low_power_pwm[1], 20);
     APP_ERROR_CHECK(err_code);
 
     APP_TIMER_DEF(lpp_timer_2);
     low_power_pwm_config.active_high    = false;
-    low_power_pwm_config.period         = 100;
+    low_power_pwm_config.period         = 255;
     low_power_pwm_config.bit_mask       = BSP_LED_2_MASK;
     low_power_pwm_config.p_timer_id     = &lpp_timer_2;
     low_power_pwm_config.p_port         = NRF_GPIO;
 
-    err_code = low_power_pwm_init((&low_power_pwm_2), &low_power_pwm_config, pwm_handler);
+    err_code = low_power_pwm_init((&low_power_pwm[2]), &low_power_pwm_config, pwm_handler);
     APP_ERROR_CHECK(err_code);
-    err_code = low_power_pwm_duty_set(&low_power_pwm_2, 20);
+    err_code = low_power_pwm_duty_set(&low_power_pwm[2], 20);
     APP_ERROR_CHECK(err_code);
 
-    err_code = low_power_pwm_start((&low_power_pwm_0), low_power_pwm_0.bit_mask);
+    APP_TIMER_DEF(lpp_timer_3);
+    low_power_pwm_config.active_high    = false;
+    low_power_pwm_config.period         = 255;
+    low_power_pwm_config.bit_mask       = BSP_LED_3_MASK;
+    low_power_pwm_config.p_timer_id     = &lpp_timer_3;
+    low_power_pwm_config.p_port         = NRF_GPIO;
+
+    err_code = low_power_pwm_init((&low_power_pwm[3]), &low_power_pwm_config, pwm_handler);
     APP_ERROR_CHECK(err_code);
-    err_code = low_power_pwm_start((&low_power_pwm_1), low_power_pwm_1.bit_mask);
+    err_code = low_power_pwm_duty_set(&low_power_pwm[3], 20);
     APP_ERROR_CHECK(err_code);
+
+    APP_TIMER_DEF(lpp_timer_4);
+    low_power_pwm_config.active_high    = false;
+    low_power_pwm_config.period         = 255;
+    low_power_pwm_config.bit_mask       = BSP_LED_4_MASK;
+    low_power_pwm_config.p_timer_id     = &lpp_timer_4;
+    low_power_pwm_config.p_port         = NRF_GPIO;
+
+    err_code = low_power_pwm_init((&low_power_pwm[4]), &low_power_pwm_config, pwm_handler);
+    APP_ERROR_CHECK(err_code);
+    err_code = low_power_pwm_duty_set(&low_power_pwm[4], 20);
+    APP_ERROR_CHECK(err_code);
+
+    APP_TIMER_DEF(lpp_timer_5);
+    low_power_pwm_config.active_high    = false;
+    low_power_pwm_config.period         = 255;
+    low_power_pwm_config.bit_mask       = BSP_LED_5_MASK;
+    low_power_pwm_config.p_timer_id     = &lpp_timer_5;
+    low_power_pwm_config.p_port         = NRF_GPIO;
+
+    err_code = low_power_pwm_init((&low_power_pwm[5]), &low_power_pwm_config, pwm_handler);
+    APP_ERROR_CHECK(err_code);
+    err_code = low_power_pwm_duty_set(&low_power_pwm[5], 20);
+    APP_ERROR_CHECK(err_code);
+
+    //err_code = low_power_pwm_start((&low_power_pwm[0]), low_power_pwm[0].bit_mask);
+    //APP_ERROR_CHECK(err_code);
+    //err_code = low_power_pwm_start((&low_power_pwm[1]), low_power_pwm[1].bit_mask);
+    //APP_ERROR_CHECK(err_code);
+    /*
     err_code = low_power_pwm_start((&low_power_pwm_2), low_power_pwm_2.bit_mask);
-
 	APP_ERROR_CHECK(err_code);
+    err_code = low_power_pwm_start((&low_power_pwm_3), low_power_pwm_3.bit_mask);
+    APP_ERROR_CHECK(err_code);
+    err_code = low_power_pwm_start((&low_power_pwm_4), low_power_pwm_4.bit_mask);
+    APP_ERROR_CHECK(err_code);
+    err_code = low_power_pwm_start((&low_power_pwm_5), low_power_pwm_5.bit_mask);
+	APP_ERROR_CHECK(err_code);
+    */
 }
 
 
@@ -184,6 +231,37 @@ void set_led_rate(uint8_t pos, uint8_t rate)
         if (rate < sizeof(sin_table)) _rate = rate;
     }else if (1 == pos){
         if (rate < sizeof(sin_table)) _rate_r = rate;
+    }
+}
+#define CLR_CNT 3
+void set_led_color(uint8_t pos, uint8_t clr)
+{
+    uint32_t err_code = 0;
+    if (0 == pos){
+        //if ((clr < CLR_CNT) && (clr != _color_l)) {
+        if ((clr < CLR_CNT)) {
+            _color_l = clr;
+            err_code = low_power_pwm_stop(&low_power_pwm[(((clr+1)%CLR_CNT)*2)]);
+            APP_ERROR_CHECK(err_code);
+            err_code = low_power_pwm_stop(&low_power_pwm[(((clr+2)%CLR_CNT)*2)]);
+            APP_ERROR_CHECK(err_code);
+            err_code = low_power_pwm_start(&low_power_pwm[clr*2], low_power_pwm[clr*2].bit_mask);
+            APP_ERROR_CHECK(err_code);
+            //err_code = low_power_pwm_duty_set(&low_power_pwm[(((clr+2)%CLR_CNT)*2)], 0);
+            //err_code = low_power_pwm_duty_set(&low_power_pwm[(((clr+1)%CLR_CNT)*2)], 0);
+        }
+        
+    }else if (1 == pos){
+        //if (clr < CLR_CNT && clr != _color_r) {
+        if (clr < CLR_CNT) {
+            _color_r = clr;
+            err_code = low_power_pwm_stop(&low_power_pwm[ ((clr+1)%CLR_CNT)*2 + 1]);
+            APP_ERROR_CHECK(err_code);
+            err_code = low_power_pwm_stop(&low_power_pwm[ ((clr+2)%CLR_CNT)*2 + 1]);
+            APP_ERROR_CHECK(err_code);
+            err_code = low_power_pwm_start((&low_power_pwm[(clr*2 + 1)]), low_power_pwm[clr*2 + 1].bit_mask);
+            APP_ERROR_CHECK(err_code);
+        }
     }
 }
 

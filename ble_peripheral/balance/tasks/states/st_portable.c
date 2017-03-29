@@ -136,3 +136,8 @@ void st_set_led_rate(uint8_t pos, uint8_t rate)
 {
     set_led_rate(pos, rate);
 }
+
+void st_set_led_clr(uint8_t pos, uint8_t clr)
+{
+    set_led_color(pos, clr);
+}

@@ -31,6 +31,7 @@ uint8_t get_cur_dev_state(void)
     return _cur_state;
 }
 
+static uint8_t scale_st = 3;
 dev_state_t do_state_active(st_data_t *data)
 {
 	static uint8_t is_set = 0; 
@@ -59,16 +60,31 @@ dev_state_t do_state_active(st_data_t *data)
         int32_t rt = adc_val[0]+ adc_val[2];
         int32_t lt = adc_val[1]+ adc_val[3];
         //0,2 right led
-       if ((rt-lt)< -30) {
-         st_set_led_rate(1, 5);
-         st_set_led_rate(0, 1);
-       }else if((lt-rt)<-30){
-         st_set_led_rate(0, 5);
-         st_set_led_rate(1, 1);
-       }else{
-         st_set_led_rate(0, 1);
-         st_set_led_rate(1, 1);
+       int32_t diff = rt-lt;
+       //if ((diff< -30) && (1 != scale_st)) {
+       if ((diff< -100)) {
+           st_set_led_rate(1, 5);
+           st_set_led_rate(0, 1);
+           st_set_led_clr(0, 1);
+           st_set_led_clr(1, 2);
+           scale_st = 1;
+       //}else if(((lt-rt)<-30) && (2 != scale_st)){
+       //}else if((diff>30) && (2 != scale_st)){
+       }else if((diff>100)){
+           st_set_led_rate(0, 5);
+           st_set_led_rate(1, 1);
+           st_set_led_clr(0, 2);
+           st_set_led_clr(1, 1);
+           scale_st = 2;
+      // }else if ((diff>=-30) && (diff<=30) && (0 != scale_st)){
+       }else if ((diff>=-100) && (diff<=100)){
+           st_set_led_rate(0, 1);
+           st_set_led_rate(1, 1);
+           st_set_led_clr(0, 0);
+           st_set_led_clr(1, 0);
+           scale_st = 0;
        }
+        //NRF_LOG_INFO("%d \r\n",scale_st);
        /*
         NRF_LOG_INFO("%u, %d, %d, %d, %d\r\n",
                 get_utc(), 
@@ -111,15 +127,19 @@ dev_state_t do_state_connected(st_data_t *data)
         int32_t lt = adc_val[1]+ adc_val[3];
         //0,2 right led
        if ((rt-lt)< -30) {
+         st_set_led_clr(0, 0);
          st_set_led_rate(1, 5);
          st_set_led_rate(0, 1);
        }else if((lt-rt)<-30){
+         st_set_led_clr(0, 0);
          st_set_led_rate(0, 5);
          st_set_led_rate(1, 1);
        }else{
+         st_set_led_clr(0, 0);
          st_set_led_rate(0, 1);
          st_set_led_rate(1, 1);
        }
+
         NRF_LOG_INFO("%u, %d, %d, %d, %d\r\n",
                 get_utc(), 
                 adc_val[0],
