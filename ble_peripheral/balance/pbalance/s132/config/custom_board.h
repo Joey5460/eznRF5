@@ -21,10 +21,10 @@ extern "C" {
 // LEDs definitions for balance borad
 #define LEDS_NUMBER    6
 
-#define LED_1          29
-#define LED_2          25
-#define LED_3          30
-#define LED_4          26
+#define LED_1          30
+#define LED_2          26
+#define LED_3          29
+#define LED_4          25
 #define LED_5          31
 #define LED_6          27
    
