@@ -4,7 +4,8 @@
 # A PC application for use with Motion Driver.
 # Copyright 2012 InvenSense, Inc. All Rights Reserved.
 
-import serial, sys, time, string, pygame
+#import serial
+import sys, time, string, pygame
 from ponycube import *
 
 # Sensor sensitivities
@@ -486,7 +487,7 @@ if __name__ == "__main__":
             break
         if event.type == pygame.KEYDOWN:
             #reader.write(pygame.key.name(event.key))
-            if 'p' == pygame.key.name(event.key):
+            if 'q' == pygame.key.name(event.key):
                 #viewer.close()
                 reader.tag.disconnect()
                 del reader.tag

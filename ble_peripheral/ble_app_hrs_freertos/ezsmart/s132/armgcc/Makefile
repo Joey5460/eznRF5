@@ -317,3 +317,6 @@ flash_softdevice:
 
 erase:
 	nrfjprog --eraseall -f nrf52
+
+ctags:
+	@ctags  -R $(INC_FOLDERS)  $(SRC_FILES) 

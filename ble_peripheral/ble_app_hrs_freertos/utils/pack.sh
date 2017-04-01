@@ -8,7 +8,7 @@
 while [[ $# -gt 0 ]]
 do
 key="$1"
-SD_PATH="../../../components/softdevice/s132/hex"
+SD_PATH="../../../../components/softdevice/s132/hex"
 case $key in
     -d|dfu)
         echo "packing dfu"
