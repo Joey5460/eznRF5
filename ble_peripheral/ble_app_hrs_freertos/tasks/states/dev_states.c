@@ -44,12 +44,12 @@ dev_state_t do_state_active(st_data_t *data)
         return ST_IDLE;
     }else {
         if (is_set == 0){
-            st_mpu_active();
+            //st_mpu_active();
             is_set = 1;
             NRF_LOG_INFO("active state \r\n");
         }
         
-        st_store_active_data();
+        //st_store_active_data();
 
         return ST_ACTIVE;
     }
@@ -74,10 +74,12 @@ dev_state_t do_state_connected(st_data_t *data)
             is_set = 1;
             NRF_LOG_INFO("connected state \r\n");
         }
+        /*
         uint8_t imu_data[20] = {0x01, 0x00};
         if (!st_imu_get_data(imu_data)){
             if(_st_tx) _st_tx(_cur_state, imu_data);
         }
+        */
         return ST_CONN;
     }
 }

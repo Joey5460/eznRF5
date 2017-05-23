@@ -72,7 +72,7 @@
 #define DEVICE_NAME                      "nSmart-"                     /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                "NordicSemiconductor"            /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                 300                              /**< The advertising interval (in units of 0.625 ms. This value corresponds to 187.5 ms). */
-#define APP_ADV_TIMEOUT_IN_SECONDS       180                              /**< The advertising time-out in units of seconds. */
+#define APP_ADV_TIMEOUT_IN_SECONDS      10// 180                              /**< The advertising time-out in units of seconds. */
 
 #define APP_TIMER_PRESCALER              0                                /**< Value of the RTC1 PRESCALER register. */
 #define APP_TIMER_OP_QUEUE_SIZE          4                                /**< Size of timer operation queues. */
@@ -728,14 +728,14 @@ static void sleep_mode_enter(void)
  */
 static void on_adv_evt(ble_adv_evt_t ble_adv_evt)
 {
-    uint32_t err_code;
+    //uint32_t err_code;
 
     switch (ble_adv_evt)
     {
         case BLE_ADV_EVT_FAST:
             NRF_LOG_INFO("Fast Adverstising\r\n");
-            err_code = bsp_indication_set(BSP_INDICATE_ADVERTISING);
-            APP_ERROR_CHECK(err_code);
+            //err_code = bsp_indication_set(BSP_INDICATE_ADVERTISING);
+            //APP_ERROR_CHECK(err_code);
             break;
 
         case BLE_ADV_EVT_IDLE:
@@ -764,8 +764,9 @@ static void on_ble_evt(ble_evt_t * p_ble_evt)
 
         case BLE_GAP_EVT_CONNECTED:
             NRF_LOG_INFO("Connected\r\n");
-            err_code = bsp_indication_set(BSP_INDICATE_CONNECTED);
-            APP_ERROR_CHECK(err_code);
+            //err_code = bsp_indication_set(BSP_INDICATE_CONNECTED);
+            //APP_ERROR_CHECK(err_code);
+			LEDS_ON(LEDS_MASK); 
             m_conn_handle = p_ble_evt->evt.gap_evt.conn_handle;
 
             dev_state_data_set(EVT_CONN);
@@ -983,6 +984,9 @@ static void bsp_event_handler(bsp_event_t event)
             }
             break;
 
+        case BSP_EVENT_DEFAULT:
+			LEDS_OFF(LEDS_MASK);
+            break;
         default:
             break;
     }
@@ -1254,8 +1258,10 @@ static void states_thread(void * arg)
     UNUSED_PARAMETER(arg);
     log_init();
     bsp_mpu_evt_handler_set(bsp_mpu_handler);
+
     bsp_mpu_init();
-    //bsp_mpu_uninit();
+    bsp_mpu_uninit();
+
     utc_timer_init();
     utc_timer_start();
 
