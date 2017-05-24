@@ -72,7 +72,7 @@
 #define DEVICE_NAME                      "nSmart-"                     /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                "NordicSemiconductor"            /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                 300                              /**< The advertising interval (in units of 0.625 ms. This value corresponds to 187.5 ms). */
-#define APP_ADV_TIMEOUT_IN_SECONDS      10// 180                              /**< The advertising time-out in units of seconds. */
+#define APP_ADV_TIMEOUT_IN_SECONDS       0// 180                              /**< The advertising time-out in units of seconds. */
 
 #define APP_TIMER_PRESCALER              0                                /**< Value of the RTC1 PRESCALER register. */
 #define APP_TIMER_OP_QUEUE_SIZE          4                                /**< Size of timer operation queues. */
@@ -961,16 +961,19 @@ static void bsp_event_handler(bsp_event_t event)
     switch (event)
     {
         case BSP_EVENT_SLEEP:
-            sleep_mode_enter();
+            //sleep_mode_enter();
+			LEDS_OFF(LEDS_MASK);
             break;
 
         case BSP_EVENT_DISCONNECT:
+            /*
             err_code = sd_ble_gap_disconnect(m_conn_handle,
                                              BLE_HCI_REMOTE_USER_TERMINATED_CONNECTION);
             if (err_code != NRF_ERROR_INVALID_STATE)
             {
                 APP_ERROR_CHECK(err_code);
             }
+            */
             break;
 
         case BSP_EVENT_WHITELIST_OFF:
