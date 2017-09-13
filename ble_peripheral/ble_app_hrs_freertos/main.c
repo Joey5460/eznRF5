@@ -56,6 +56,10 @@
 #include "libraries/xtimers/xtimers.h"
 #include "libraries/eMPL/inv_mpu_dmp_motion_driver.h"
 
+#include "ble_dfu.h"
+
+
+
 #define NRF_LOG_MODULE_NAME "APP"
 #include "nrf_log.h"
 #include "nrf_log_ctrl.h"
@@ -117,6 +121,35 @@
 #define OSTIMER_WAIT_FOR_QUEUE           2                                /**< Number of ticks to wait for the timer queue to be ready */
 
 #define APP_FEATURE_NOT_SUPPORTED        BLE_GATT_STATUS_ATTERR_APP_BEGIN + 2        /**< Reply when unsupported features are requested. */
+
+static ble_dfu_t m_dfus;                                                            /**< Structure used to identify the DFU service. */
+
+void ble_dfu_evt_handler(ble_dfu_t * p_dfu, ble_dfu_evt_t * p_evt)
+{
+    switch (p_evt->type)
+    {
+
+        case BLE_DFU_EVT_INDICATION_DISABLED:
+            NRF_LOG_INFO("Indication for BLE_DFU is disabled\r\n");
+            break;
+
+
+        case BLE_DFU_EVT_INDICATION_ENABLED:
+
+            NRF_LOG_INFO("Indication for BLE_DFU is enabled\r\n");
+            break;
+
+        case BLE_DFU_EVT_ENTERING_BOOTLOADER:
+            NRF_LOG_INFO("Device is entering bootloader mode!\r\n");
+            break;
+
+        default:
+            NRF_LOG_INFO("Unknown event from ble_dfu\r\n");
+            break;
+    }
+}
+
+
 
 
 static uint16_t  m_conn_handle = BLE_CONN_HANDLE_INVALID; /**< Handle of the current connection. */
@@ -590,6 +623,20 @@ static void services_init(void)
     err_code = ble_imu_init(&m_imu, &imu_init);
     APP_ERROR_CHECK(err_code);
 
+    ble_dfu_init_t dfus_init;
+
+
+
+    // Initialize the Device Firmware Update Service.
+    memset(&dfus_init, 0, sizeof(dfus_init));
+
+    dfus_init.evt_handler                               = ble_dfu_evt_handler;
+    dfus_init.ctrl_point_security_req_write_perm        = SEC_SIGNED;
+    dfus_init.ctrl_point_security_req_cccd_write_perm   = SEC_SIGNED;
+
+    err_code = ble_dfu_init(&m_dfus, &dfus_init);
+    APP_ERROR_CHECK(err_code);
+
 
 }
 
@@ -867,6 +914,7 @@ static void ble_evt_dispatch(ble_evt_t * p_ble_evt)
 
     ble_imu_on_ble_evt(&m_imu, p_ble_evt);
 	ble_sync_on_ble_evt(&m_sync, p_ble_evt);
+    ble_dfu_on_ble_evt(&m_dfus, p_ble_evt);
 }
 
 
@@ -1260,6 +1308,7 @@ static void states_thread(void * arg)
 {
     UNUSED_PARAMETER(arg);
     log_init();
+    log_uninit();
     bsp_mpu_evt_handler_set(bsp_mpu_handler);
 
     bsp_mpu_init();

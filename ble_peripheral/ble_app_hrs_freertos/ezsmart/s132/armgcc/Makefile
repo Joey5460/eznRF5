@@ -15,9 +15,11 @@ SRC_FILES += \
   $(SDK_ROOT)/components/libraries/button/app_button.c \
   $(SDK_ROOT)/components/libraries/util/app_error.c \
   $(SDK_ROOT)/components/libraries/util/app_error_weak.c \
+  $(SDK_ROOT)/components/libraries/scheduler/app_scheduler.c \
   $(SDK_ROOT)/components/libraries/timer/app_timer_freertos.c \
   $(SDK_ROOT)/components/libraries/util/app_util_platform.c \
   $(SDK_ROOT)/components/libraries/crc16/crc16.c \
+  $(SDK_ROOT)/components/libraries/crc32/crc32.c \
   $(SDK_ROOT)/components/libraries/fds/fds.c \
   $(SDK_ROOT)/components/libraries/fstorage/fstorage.c \
   $(SDK_ROOT)/components/libraries/hardfault/nrf52/handler/hardfault_handler_gcc.c \
@@ -93,6 +95,14 @@ SRC_FILES += \
   $(SDK_ROOT)/components/libraries/fifo/app_fifo.c \
   $(SDK_ROOT)/components/drivers_nrf/spi_master/nrf_drv_spi.c \
   $(SDK_ROOT)/components/drivers_nrf/twi_master/nrf_drv_twi.c \
+  $(SDK_ROOT)/components/ble/ble_services/ble_dfu/ble_dfu.c \
+  $(SDK_ROOT)/components/libraries/bootloader/dfu/nrf_dfu_settings.c \
+  $(PROJ_DIR)/nrf_dfu_flash_buttonless.c \
+
+
+
+
+
 
 
 # Include folders common to all targets
@@ -212,6 +222,13 @@ INC_FOLDERS += \
   $(PROJ_DIR)/libraries/xtimers \
   $(SDK_ROOT)/components/libraries/fifo \
   $(SDK_ROOT)/components/drivers_nrf/twi_master \
+  $(SDK_ROOT)/components/ble/ble_services/ble_dfu \
+  $(SDK_ROOT)/components/libraries/bootloader/dfu \
+
+
+
+
+
 
 # Libraries common to all targets
 LIB_FILES += \
@@ -244,6 +261,7 @@ CFLAGS += -DEZSMART
 CFLAGS += -DCONFIG_NFCT_PINS_AS_GPIOS
 CFLAGS += -DEMPL_TARGET_NRF
 CFLAGS += -DMPU9250
+CFLAGS += -DNRF_DFU_SETTINGS_VERSION=1
 CFLAGS += -mcpu=cortex-m4
 CFLAGS += -mthumb -mabi=aapcs
 CFLAGS +=  -Wall -Werror -O3 -g3

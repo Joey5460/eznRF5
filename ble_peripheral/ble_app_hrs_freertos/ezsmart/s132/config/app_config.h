@@ -71,4 +71,16 @@
 #define NRF_LOG_ENABLED 0 
 #endif
 
+#ifndef APP_SCHEDULER_ENABLED
+#define APP_SCHEDULER_ENABLED 1
+#endif
+
+#ifndef CRC32_ENABLED
+#define CRC32_ENABLED 1
+#endif
+
+
+
+
+
 #endif//APP_CONFIG_H

@@ -9,17 +9,21 @@ while [[ $# -gt 0 ]]
 do
 key="$1"
 SD_PATH="../../../../components/softdevice/s132/hex"
+APP_PATH="../ezsmart/s132/armgcc/_build"
+BL_PATH="../../../dfu/bootloader_secure/pca10040/armgcc/_build"
 case $key in
     -d|dfu)
         echo "packing dfu"
         #shift # past argument
-        nrfutil pkg generate --debug-mode --application nrf52832_xxaa.hex --key-file private.pem app_dfu_package.zip
+        #nrfutil pkg generate --application nrf52832_xxaa.hex --key-file private.key app_dfu_package.zip
+        nrfutil pkg generate --hw-version 52 --application-version 4 --application $APP_PATH/nrf52832_xxaa.hex --sd-req 0x8C --key-file private.key app_dfu_package.zip
     ;;
     -h|hex)
         echo "mergering hex"
+		cp -r $BL_PATH/nrf52832_xxaa_s132.hex bootloader.hex
         mergehex -m $SD_PATH/s132_nrf52_3.0.0_softdevice.hex bootloader.hex -o sd_bl.hex
-        mergehex -m sd_bl.hex nrf52832_xxaa.hex -o sd_bl_ns.hex 
-        mergehex -m sd_bl_ns.hex bootloader_settings.hex -o sd_bl_app_cfg.hex 
+        mergehex -m sd_bl.hex $APP_PATH/nrf52832_xxaa.hex -o sd_bl_app.hex 
+        mergehex -m sd_bl_app.hex bootloader_settings.hex -o sd_bl_app_cfg.hex 
     #shift # past argument
     ;;
     -f|flash)
@@ -28,10 +32,11 @@ case $key in
     ;;
     setting)
         echo "setting"
-        nrfutil settings generate --family NRF52 --application nrf52832_xxaa.hex --application-version 3 --bootloader-version 2 --bl-settings-version 1 bootloader_settings.hex
+        nrfutil settings generate --family NRF52 --application $APP_PATH/nrf52832_xxaa.hex --application-version 3 --bootloader-version 1 --bl-settings-version 1 bootloader_settings.hex
     ;;
     gkey)
-        nrfutil keys generate private.pem
+        nrfutil keys generate private.key
+		nrfutil keys display --key pk --format code private.key --out_file public_key.c
     ;;
     update)
     nrfutil dfu ble -ic NRF51 -pkg app_dfu_package.zip -p /dev/ttyACM0 -n "Nordic_Template" -f
