@@ -4,13 +4,13 @@
 #define NRF_LOG_MODULE_NAME "SPIFFS"
 #include "nrf_log.h"
 #include "nrf_delay.h"
-#ifdef  EZSMART
+#ifdef BOARD_CUSTOM
 #define PHYS_FLASH_SIZE       (4*1024*1024)
 #define SPIFFS_FLASH_SIZE     (4*1024*1024)
-#elif   defined ZULP
+#elif  defined BOARD_PCA10040
 #define PHYS_FLASH_SIZE       (1024*1024)
 #define SPIFFS_FLASH_SIZE     (1024*1024)
-#endif //EZSMART
+#endif //EZLE
 #define SPIFFS_PHYS_ADDR      (0)
 #define SECTOR_SIZE         (4*1024) 
 #define LOG_BLOCK_SIZE      (64*1024)

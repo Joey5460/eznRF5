@@ -2,7 +2,7 @@
 #define APP_CONFIG_H
 // <h> Application 
 
-#ifdef ZULP
+#ifdef BOARD_PCA10040
 //==========================================================
 // <h> SPI_CONFIGURATION - Spi configuration
 
@@ -62,7 +62,7 @@
 
 #else
 #error "no flash gpio defined"
-#endif// ZULP
+#endif// BOARD_PCA10040
 
 
 #ifndef APP_FIFO_ENABLED
@@ -71,6 +71,14 @@
 
 #ifndef NRF_LOG_ENABLED
 #define NRF_LOG_ENABLED 1 
+#endif
+
+#ifndef APP_SCHEDULER_ENABLED
+#define APP_SCHEDULER_ENABLED 1
+#endif
+
+#ifndef CRC32_ENABLED
+#define CRC32_ENABLED 1
 #endif
 
 #endif//APP_CONFIG_H

@@ -2,5 +2,5 @@
 	path = ble_peripheral/ble_app_hrs_freertos/utils/ext/bluepy
 	url = https://github.com/IanHarvey/bluepy.git
 [submodule "ble_peripheral/ble_app_hrs_freertos/utils/ext/bluepy"]
-	path = ble_peripheral/ble_app_hrs_freertos/utils/ext/bluepy
+	path = utils/ext/bluepy
 	url = https://github.com/IanHarvey/bluepy.git

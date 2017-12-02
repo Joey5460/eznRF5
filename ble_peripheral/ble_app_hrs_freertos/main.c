@@ -1307,13 +1307,14 @@ static TaskHandle_t m_states_task;         /**< Definition of Logger thread. */
 static void states_thread(void * arg)
 {
     UNUSED_PARAMETER(arg);
+//#ifdef BOARD_CUSTOM
     log_init();
     log_uninit();
     bsp_mpu_evt_handler_set(bsp_mpu_handler);
 
     bsp_mpu_init();
     bsp_mpu_uninit();
-
+//#endif
     utc_timer_init();
     utc_timer_start();
 

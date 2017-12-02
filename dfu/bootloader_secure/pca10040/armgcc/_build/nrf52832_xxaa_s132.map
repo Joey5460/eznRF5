@@ -1,0 +1,916 @@
+Archive member included because of file (symbol)
+
+/usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-exit.o)
+                              /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o (exit)
+/usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-impure.o)
+                              /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-exit.o) (_global_impure_ptr)
+/usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-init.o)
+                              /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o (__libc_init_array)
+/usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memset.o)
+                              /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o (memset)
+/usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a(_exit.o)
+                              /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-exit.o) (_exit)
+../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                              _build/nrf52832_xxaa_s132_ecc.c.o (symbol from plugin) (uECC_set_rng)
+/usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcmp.o)
+                              _build/nrf52832_xxaa_s132_dfu_req_handling.c.o (symbol from plugin) (memcmp)
+/usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcpy.o)
+                              _build/nrf52832_xxaa_s132_app_scheduler.c.o (symbol from plugin) (memcpy)
+/usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-strlen.o)
+                              _build/nrf52832_xxaa_s132_nrf_ble_dfu.c.o (symbol from plugin) (strlen)
+/usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_ashldi3.o)
+                              /tmp/ccuRNpCe.ltrans4.ltrans.o (__aeabi_llsl)
+
+Allocating common symbols
+Common symbol       size              file
+
+m_image_hash_type   0x1               _build/nrf52832_xxaa_s132_dfu_req_handling.c.o (symbol from plugin)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+ .data          0x00000000        0x4 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+ .ARM.extab     0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+ .text          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-exit.o)
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-exit.o)
+ .text          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-impure.o)
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x00000000        0x4 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-impure.o)
+ .text          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-init.o)
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-init.o)
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-init.o)
+ .text          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memset.o)
+ .text          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a(_exit.o)
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a(_exit.o)
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a(_exit.o)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_app_error_weak.c.o (symbol from plugin)
+ .data          0x00000000        0x0 /tmp/ccuRNpCe.ltrans1.ltrans.o
+ .data          0x00000000        0x0 /tmp/ccuRNpCe.ltrans2.ltrans.o
+ .data          0x00000000        0x0 /tmp/ccuRNpCe.ltrans3.ltrans.o
+ .data          0x00000000        0x0 /tmp/ccuRNpCe.ltrans4.ltrans.o
+ .bss           0x00000000        0x0 /tmp/ccuRNpCe.ltrans4.ltrans.o
+ .data          0x00000000        0x0 /tmp/ccuRNpCe.ltrans6.ltrans.o
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_ashldi3.o)
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_ashldi3.o)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_app_scheduler.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_app_timer.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_app_timer_appsh.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_app_util_platform.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_crc32.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_ecc.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_fstorage.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_hci_mem_pool.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_assert.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_crypto.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_queue.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_sdk_errors.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_sha256.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_boards.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_drv_common.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_drv_rng.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_nvmc.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_ble_dfu.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_dfu-cc.pb.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_dfu_public_key.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_dfu_req_handling.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_main.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_ble_advdata.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_ble_conn_params.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_ble_srv_common.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_pb_common.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_pb_decode.c.o (symbol from plugin)
+ .data          0x00000000        0x0 _build/nrf52832_xxaa_s132_gcc_startup_nrf52.S.o
+ .bss           0x00000000        0x0 _build/nrf52832_xxaa_s132_gcc_startup_nrf52.S.o
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_system_nrf52.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_softdevice_handler.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_softdevice_handler_appsh.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_bootloader.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_bootloader_app_start.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_bootloader_info.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_dfu.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_dfu_flash.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_dfu_mbr.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_dfu_settings.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_dfu_transport.c.o (symbol from plugin)
+ .text          0x00000000        0x0 _build/nrf52832_xxaa_s132_nrf_dfu_utils.c.o (symbol from plugin)
+ .group         0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .group         0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .group         0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .group         0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .group         0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .group         0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .group         0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .group         0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .group         0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .group         0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .group         0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .group         0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text          0x00000000        0x0 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .data          0x00000000        0x0 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .bss           0x00000000        0x0 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.HMAC_init
+                0x00000000       0x46 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.HMAC_update
+                0x00000000        0x4 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.HMAC_finish
+                0x00000000       0x62 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.update_V
+                0x00000000       0x24 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.omega_mult_secp256k1
+                0x00000000       0x34 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_set_rng
+                0x00000000        0xc ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_get_rng
+                0x00000000        0xc ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_curve_private_key_size
+                0x00000000        0xe ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_curve_public_key_size
+                0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.vli_mmod_fast_secp256k1
+                0x00000000       0x84 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.regularize_k
+                0x00000000       0x5a ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.vli_mmod_fast_secp192r1
+                0x00000000       0x94 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.vli_mmod_fast_secp224r1
+                0x00000000       0xdc ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_vli_cmp
+                0x00000000       0x36 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.omega_mult_secp160r1
+                0x00000000       0x42 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.vli_mmod_fast_secp160r1
+                0x00000000       0x84 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_vli_modSquare
+                0x00000000       0x22 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.x_side_secp256k1
+                0x00000000       0x2e ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.double_jacobian_secp256k1
+                0x00000000      0x10a ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.XYcZ_addC
+                0x00000000      0x118 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.EccPoint_mult
+                0x00000000      0x1a2 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.EccPoint_compute_public_key
+                0x00000000       0x56 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_secp160r1
+                0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_secp192r1
+                0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_secp224r1
+                0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_secp256k1
+                0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_vli_nativeToBytes
+                0x00000000       0x28 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_vli_bytesToNative
+                0x00000000       0x42 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_generate_random_int
+                0x00000000       0x78 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_sign_with_k
+                0x00000000      0x16c ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_make_key
+                0x00000000       0x3e ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_shared_secret
+                0x00000000       0xa4 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_valid_point
+                0x00000000       0x6c ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_valid_public_key
+                0x00000000        0x4 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_compute_public_key
+                0x00000000       0x44 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_sign
+                0x00000000       0x52 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_sign_deterministic
+                0x00000000      0x1a2 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_curve_num_words
+                0x00000000        0x6 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_curve_num_bytes
+                0x00000000        0x6 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_curve_num_bits
+                0x00000000        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_curve_num_n_words
+                0x00000000        0xe ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_curve_num_n_bytes
+                0x00000000        0xe ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_curve_num_n_bits
+                0x00000000        0x6 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_curve_p
+                0x00000000        0x4 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_curve_n
+                0x00000000        0x4 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_curve_G
+                0x00000000        0x4 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_curve_b
+                0x00000000        0x4 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_vli_mmod_fast
+                0x00000000        0x6 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_point_mult
+                0x00000000       0x42 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .rodata.curve_secp192r1
+                0x00000000       0xb0 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .rodata.curve_secp256k1
+                0x00000000       0xb0 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .rodata.curve_secp160r1
+                0x00000000       0xb0 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .rodata.curve_secp224r1
+                0x00000000       0xb0 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .bss.g_rng_function
+                0x00000000        0x4 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcmp.o)
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcmp.o)
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcmp.o)
+ .text          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcpy.o)
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcpy.o)
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcpy.o)
+ .text          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-strlen.o)
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-strlen.o)
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-strlen.o)
+ .text          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
+ .text          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+ .data          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+ .bss           0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x00078000         0x00006000         xr
+RAM              0x20002c00         0x00005380         xrw
+NOINIT           0x20007f80         0x00000080         xrw
+BOOTLOADER_SETTINGS 0x0007f000         0x00001000         rw
+UICR_BOOTLOADER  0x10001014         0x00000004         r
+MBR_PARAMS_PAGE  0x0007e000         0x00001000         rw
+UICR_MBR_PARAM_PAGE 0x10001018         0x00000004         r
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x00078000     0x5208
+ *(.isr_vector)
+ .isr_vector    0x00078000      0x400 _build/nrf52832_xxaa_s132_gcc_startup_nrf52.S.o
+                0x00078000                __isr_vector
+ *(.text*)
+ .text          0x00078400       0x5c /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .text          0x0007845c       0x74 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+                0x0007845c                _mainCRTStartup
+                0x0007845c                _start
+ .text.exit     0x000784d0       0x28 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-exit.o)
+                0x000784d0                exit
+ .text.__libc_init_array
+                0x000784f8       0x4c /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-init.o)
+                0x000784f8                __libc_init_array
+ .text.memset   0x00078544       0x10 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memset.o)
+                0x00078544                memset
+ .text._exit    0x00078554        0x4 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a(_exit.o)
+                0x00078554                _exit
+ .text          0x00078558      0xa34 /tmp/ccuRNpCe.ltrans0.ltrans.o
+                0x00078558                ble_evt_dispatch.lto_priv.120
+ .text          0x00078f8c      0xa5c /tmp/ccuRNpCe.ltrans1.ltrans.o
+                0x0007909c                fs_sys_event_handler
+                0x0007916c                conn_params_error_handler.lto_priv.122
+                0x00079172                send_hvx.lto_priv.79
+                0x000791ac                advertising_start.lto_priv.133
+                0x00079288                sd_softdevice_vector_table_base_set.lto_priv.143
+                0x0007928c                uint32_encode.lto_priv.80
+                0x000792a2                sd_ble_user_mem_reply.lto_priv.160
+                0x000792a6                sd_ble_uuid_vs_add.lto_priv.138
+                0x000792aa                sd_ble_gatts_exchange_mtu_reply.lto_priv.157
+                0x000792ae                sd_ble_gatts_sys_attr_set.lto_priv.158
+                0x000792b2                sd_ble_gatts_rw_authorize_reply.lto_priv.163
+                0x000792b6                sd_ble_gatts_value_get.lto_priv.164
+                0x000792ba                sd_ble_gatts_characteristic_add.lto_priv.139
+                0x000792be                sd_ble_gatts_service_add.lto_priv.137
+                0x000792c2                sd_ble_gap_sec_info_reply.lto_priv.159
+                0x000792c6                sd_ble_gap_sec_params_reply.lto_priv.161
+                0x000792ca                sd_ble_gap_device_name_set.lto_priv.140
+                0x000792ce                sd_ble_gap_ppcp_set.lto_priv.134
+                0x000792d2                sd_ble_gap_disconnect.lto_priv.105
+                0x000792d6                sd_ble_gap_adv_stop.lto_priv.119
+                0x000792da                sd_ble_gap_addr_get.lto_priv.142
+                0x000792de                sd_ble_gap_addr_set.lto_priv.141
+                0x000792e2                queue_get_next_free.lto_priv.87
+                0x00079318                queue_start.lto_priv.86
+                0x00079330                crc32_compute
+                0x00079368                sd_nvic_critical_region_exit.lto_priv.78
+                0x00079394                RNG_IRQHandler
+                0x00079458                RTC1_IRQHandler
+                0x00079510                user_op_alloc.lto_priv.77
+                0x00079540                rtc1_stop.lto_priv.115
+                0x00079588                SWI0_EGU0_IRQHandler
+                0x000798a0                app_sched_event_put.part.0.lto_priv.88
+                0x0007995c                app_timer_evt_schedule
+                0x00079988                app_sched_execute
+ .text.unlikely
+                0x000799e8      0x134 /tmp/ccuRNpCe.ltrans1.ltrans.o
+                0x000799e8                sha256_transform
+ .text          0x00079b1c      0x4b0 /tmp/ccuRNpCe.ltrans2.ltrans.o
+                0x00079b1c                buf_read.lto_priv.91
+                0x00079b40                update_timeout_handler.lto_priv.127
+                0x00079bc0                dfu_data_write_handler.lto_priv.151
+                0x00079bd0                on_dfu_complete.lto_priv.154
+                0x00079d08                pb_decode_varint32.lto_priv.90
+                0x00079d6e                pb_read
+                0x00079dc0                pb_field_iter_begin
+                0x00079de2                pb_field_iter_next
+                0x00079e68                conn_params_negotiation.lto_priv.165
+                0x00079f4c                sd_ble_gap_ppcp_get.lto_priv.136
+                0x00079f50                sd_ble_gap_ppcp_set.lto_priv.135
+                0x00079f54                NVIC_SystemReset.lto_priv.84
+                0x00079f78                dfu_decode_commmand.lto_priv.162
+ .text.startup  0x00079fcc      0x328 /tmp/ccuRNpCe.ltrans2.ltrans.o
+                0x00079fcc                main
+ .text          0x0007a2f4      0xa3c /tmp/ccuRNpCe.ltrans3.ltrans.o
+                0x0007a394                softdevice_evt_schedule
+                0x0007a450                softdevice_fault_handler
+                0x0007a456                pb_dec_submessage.lto_priv.99
+                0x0007a492                pb_dec_fixed64.lto_priv.96
+                0x0007a50e                pb_dec_fixed32.lto_priv.95
+                0x0007a53e                pb_dec_string.lto_priv.98
+                0x0007a57a                pb_dec_bytes.lto_priv.97
+                0x0007a5ba                pb_dec_svarint.lto_priv.94
+                0x0007a622                pb_dec_uvarint.lto_priv.93
+                0x0007a67e                pb_dec_varint.lto_priv.92
+                0x0007a6da                sd_mbr_command.lto_priv.81
+                0x0007a6de                nrf_dfu_mbr_init_sd
+                0x0007a6fa                nrf_dfu_flash_erase
+                0x0007a834                nrf_dfu_flash_store
+                0x0007a968                nrf_dfu_settings_write
+                0x0007a9e8                nrf_bootloader_app_start
+                0x0007aa14                SWI2_EGU2_IRQHandler
+                0x0007aa38                sd_ble_enable.lto_priv.145
+                0x0007aa3c                sd_softdevice_enable.lto_priv.144
+                0x0007aa40                SystemInit
+                0x0007ad1c                pb_readbyte.part.0.lto_priv.100
+ .text          0x0007ad30      0x4e8 /tmp/ccuRNpCe.ltrans4.ltrans.o
+                0x0007ad80                pb_message_set_to_defaults.lto_priv.89
+                0x0007ae4e                pb_make_string_substream
+                0x0007b010                pb_decode_noinit
+                0x0007b1b8                pb_decode_varint
+ .text          0x0007b218      0x420 /tmp/ccuRNpCe.ltrans5.ltrans.o
+                0x0007b218                sd_nvic_critical_region_enter.constprop.76
+                0x0007b264                nrf_delay_us.part.0.constprop.66
+                0x0007b2f0                app_timer_stop.constprop.57
+                0x0007b350                response_send.constprop.35
+                0x0007b390                response_crc_cmd_send.constprop.18
+                0x0007b3f4                nrf_delay_us.constprop.17
+                0x0007b484                nrf_dfu_find_cache.constprop.15
+                0x0007b500                nrf_dfu_sd_continue_impl.isra.0.lto_priv.117
+                0x0007b590                nrf_dfu_app_is_valid
+                0x0007b5c0                nrf_dfu_invalidate_bank.lto_priv.118
+                0x0007b5e0                nrf_dfu_bl_continue.lto_priv.116
+ .text.unlikely
+                0x0007b638      0x17c /tmp/ccuRNpCe.ltrans5.ltrans.o
+                0x0007b638                nrf_crypto_hash_compute.part.4.constprop.47
+ .text          0x0007b7b4      0x39c /tmp/ccuRNpCe.ltrans6.ltrans.o
+                0x0007b7b4                ble_dfu_transport_init
+ .text          0x0007bb50       0x18 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_ashldi3.o)
+                0x0007bb50                __ashldi3
+                0x0007bb50                __aeabi_llsl
+ .text          0x0007bb68       0x3c _build/nrf52832_xxaa_s132_gcc_startup_nrf52.S.o
+                0x0007bb68                Reset_Handler
+                0x0007bb90                NMI_Handler
+                0x0007bb92                HardFault_Handler
+                0x0007bb94                MemoryManagement_Handler
+                0x0007bb96                BusFault_Handler
+                0x0007bb98                UsageFault_Handler
+                0x0007bb9a                SVC_Handler
+                0x0007bb9c                DebugMon_Handler
+                0x0007bb9e                PendSV_Handler
+                0x0007bba0                SysTick_Handler
+                0x0007bba2                TIMER2_IRQHandler
+                0x0007bba2                RTC0_IRQHandler
+                0x0007bba2                GPIOTE_IRQHandler
+                0x0007bba2                PWM1_IRQHandler
+                0x0007bba2                POWER_CLOCK_IRQHandler
+                0x0007bba2                RADIO_IRQHandler
+                0x0007bba2                PDM_IRQHandler
+                0x0007bba2                TEMP_IRQHandler
+                0x0007bba2                QDEC_IRQHandler
+                0x0007bba2                TIMER3_IRQHandler
+                0x0007bba2                FPU_IRQHandler
+                0x0007bba2                SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQHandler
+                0x0007bba2                UARTE0_UART0_IRQHandler
+                0x0007bba2                TIMER4_IRQHandler
+                0x0007bba2                I2S_IRQHandler
+                0x0007bba2                SWI4_EGU4_IRQHandler
+                0x0007bba2                TIMER0_IRQHandler
+                0x0007bba2                TIMER1_IRQHandler
+                0x0007bba2                PWM2_IRQHandler
+                0x0007bba2                ECB_IRQHandler
+                0x0007bba2                SPIM1_SPIS1_TWIM1_TWIS1_SPI1_TWI1_IRQHandler
+                0x0007bba2                Default_Handler
+                0x0007bba2                SAADC_IRQHandler
+                0x0007bba2                CCM_AAR_IRQHandler
+                0x0007bba2                WDT_IRQHandler
+                0x0007bba2                SWI5_EGU5_IRQHandler
+                0x0007bba2                RTC2_IRQHandler
+                0x0007bba2                PWM0_IRQHandler
+                0x0007bba2                SWI3_EGU3_IRQHandler
+                0x0007bba2                SWI1_EGU1_IRQHandler
+                0x0007bba2                SPIM2_SPIS2_SPI2_IRQHandler
+                0x0007bba2                NFCT_IRQHandler
+                0x0007bba2                MWU_IRQHandler
+                0x0007bba2                COMP_LPCOMP_IRQHandler
+ .text.bcopy    0x0007bba4        0xc ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_vli_cmp_unsafe
+                0x0007bbb0       0x2a ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ *fill*         0x0007bbda        0x6 
+ .text.uECC_vli_add
+                0x0007bbe0       0x58 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007bbe0                uECC_vli_add
+ *fill*         0x0007bc38        0x8 
+ .text.uECC_vli_sub
+                0x0007bc40       0x60 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007bc40                uECC_vli_sub
+ .text.uECC_vli_mult
+                0x0007bca0      0x312 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007bca0                uECC_vli_mult
+ .text.uECC_vli_square
+                0x0007bfb2      0x28c ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007bfb2                uECC_vli_square
+ .text.uECC_vli_clear
+                0x0007c23e       0x18 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c23e                uECC_vli_clear
+ .text.bits2int
+                0x0007c256       0x88 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_vli_isZero
+                0x0007c2de       0x1e ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c2de                uECC_vli_isZero
+ .text.uECC_vli_testBit
+                0x0007c2fc       0x12 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c2fc                uECC_vli_testBit
+ .text.uECC_vli_numBits
+                0x0007c30e       0x44 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c30e                uECC_vli_numBits
+ .text.uECC_vli_set
+                0x0007c352       0x1a ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c352                uECC_vli_set
+ .text.vli_mmod_fast_secp256r1
+                0x0007c36c      0x1b0 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_vli_equal
+                0x0007c51c       0x2a ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c51c                uECC_vli_equal
+ .text.uECC_vli_rshift1
+                0x0007c546       0x1a ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c546                uECC_vli_rshift1
+ .text.vli_modInv_update
+                0x0007c560       0x3a ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_vli_modAdd
+                0x0007c59a       0x32 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c59a                uECC_vli_modAdd
+ .text.uECC_vli_modSub
+                0x0007c5cc       0x24 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c5cc                uECC_vli_modSub
+ .text.uECC_vli_mmod
+                0x0007c5f0      0x13c ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c5f0                uECC_vli_mmod
+ .text.uECC_vli_modMult
+                0x0007c72c       0x24 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c72c                uECC_vli_modMult
+ .text.uECC_vli_modMult_fast
+                0x0007c750       0x20 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c750                uECC_vli_modMult_fast
+ .text.uECC_vli_modSquare_fast
+                0x0007c770       0x20 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007c770                uECC_vli_modSquare_fast
+ .text.x_side_default
+                0x0007c790       0x5a ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.double_jacobian_default
+                0x0007c7ea      0x154 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.XYcZ_add
+                0x0007c93e       0xca ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.apply_z  0x0007ca08       0x3e ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .text.uECC_vli_modInv
+                0x0007ca46      0x10c ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007ca46                uECC_vli_modInv
+ *fill*         0x0007cb52        0x2 
+ .text.uECC_secp256r1
+                0x0007cb54        0x8 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007cb54                uECC_secp256r1
+ .text.uECC_verify
+                0x0007cb5c      0x2d4 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                0x0007cb5c                uECC_verify
+ .text.memcmp   0x0007ce30       0x20 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcmp.o)
+                0x0007ce30                memcmp
+ .text.memcpy   0x0007ce50       0x16 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcpy.o)
+                0x0007ce50                memcpy
+ .text.strlen   0x0007ce66       0x10 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-strlen.o)
+                0x0007ce66                strlen
+ *(.init)
+ *fill*         0x0007ce76        0x2 
+ .init          0x0007ce78        0x4 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+                0x0007ce78                _init
+ .init          0x0007ce7c        0x8 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+ *(.fini)
+ .fini          0x0007ce84        0x4 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+                0x0007ce84                _fini
+ .fini          0x0007ce88        0x8 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ *(.rodata*)
+ .rodata.str1.1
+                0x0007ce90        0x2 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-impure.o)
+ *fill*         0x0007ce92        0x2 
+ .rodata._global_impure_ptr
+                0x0007ce94        0x4 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-impure.o)
+                0x0007ce94                _global_impure_ptr
+ .rodata.pk     0x0007ce98       0x40 /tmp/ccuRNpCe.ltrans0.ltrans.o
+ .rodata        0x0007ced8      0x100 /tmp/ccuRNpCe.ltrans1.ltrans.o
+ .rodata        0x0007cfd8      0x138 /tmp/ccuRNpCe.ltrans2.ltrans.o
+ .rodata.dfu_init_command_is_debug_default
+                0x0007d110        0x1 /tmp/ccuRNpCe.ltrans2.ltrans.o
+ *fill*         0x0007d111        0x3 
+ .rodata        0x0007d114       0x24 /tmp/ccuRNpCe.ltrans4.ltrans.o
+ .rodata        0x0007d138       0x14 /tmp/ccuRNpCe.ltrans6.ltrans.o
+ .rodata.str1.1
+                0x0007d14c        0x8 /tmp/ccuRNpCe.ltrans6.ltrans.o
+ .rodata.curve_secp256r1
+                0x0007d154       0xb0 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ *(.eh_frame*)
+ .eh_frame      0x0007d204        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .eh_frame      0x0007d204        0x4 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
+
+.glue_7         0x0007d208        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x0007d208        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x0007d208        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x0007d208        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x0007d208        0x0
+ .iplt          0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0007d208                __exidx_start = .
+
+.ARM.exidx      0x0007d208        0x8
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x0007d208        0x8 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+                0x0007d210                __exidx_end = .
+                0x0007d210                __etext = .
+
+.data           0x20002c00       0x74 load address 0x0007d210
+                0x20002c00                __data_start__ = .
+ *(vtable)
+ *(.data*)
+ .data.impure_data
+                0x20002c00       0x60 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-impure.o)
+ .data          0x20002c60        0x1 /tmp/ccuRNpCe.ltrans0.ltrans.o
+ *fill*         0x20002c61        0x1 
+ .data          0x20002c62        0x2 /tmp/ccuRNpCe.ltrans5.ltrans.o
+                0x20002c62                m_conn_handle.lto_priv.103
+ .data.SystemCoreClock
+                0x20002c64        0x4 /tmp/ccuRNpCe.ltrans5.ltrans.o
+                0x20002c64                SystemCoreClock
+                0x20002c68                . = ALIGN (0x4)
+                0x20002c68                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                0x20002c68                PROVIDE (__preinit_array_end, .)
+                0x20002c68                . = ALIGN (0x4)
+                0x20002c68                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x20002c68        0x4 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+                0x20002c6c                PROVIDE (__init_array_end, .)
+                0x20002c6c                . = ALIGN (0x4)
+                0x20002c6c                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array)
+ .fini_array    0x20002c6c        0x4 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+                0x20002c70                PROVIDE (__fini_array_end, .)
+ *(.jcr*)
+ .jcr           0x20002c70        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .jcr           0x20002c70        0x4 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
+                0x20002c74                . = ALIGN (0x4)
+                0x20002c74                __data_end__ = .
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a
+LOAD _build/nrf52832_xxaa_s132_app_error_weak.c.o
+LOAD /tmp/ccuRNpCe.ltrans0.ltrans.o
+LOAD /tmp/ccuRNpCe.ltrans1.ltrans.o
+LOAD /tmp/ccuRNpCe.ltrans2.ltrans.o
+LOAD /tmp/ccuRNpCe.ltrans3.ltrans.o
+LOAD /tmp/ccuRNpCe.ltrans4.ltrans.o
+LOAD /tmp/ccuRNpCe.ltrans5.ltrans.o
+LOAD /tmp/ccuRNpCe.ltrans6.ltrans.o
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a
+LOAD _build/nrf52832_xxaa_s132_app_scheduler.c.o
+LOAD _build/nrf52832_xxaa_s132_app_timer.c.o
+LOAD _build/nrf52832_xxaa_s132_app_timer_appsh.c.o
+LOAD _build/nrf52832_xxaa_s132_app_util_platform.c.o
+LOAD _build/nrf52832_xxaa_s132_crc32.c.o
+LOAD _build/nrf52832_xxaa_s132_ecc.c.o
+LOAD _build/nrf52832_xxaa_s132_fstorage.c.o
+LOAD _build/nrf52832_xxaa_s132_hci_mem_pool.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_assert.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_crypto.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_queue.c.o
+LOAD _build/nrf52832_xxaa_s132_sdk_errors.c.o
+LOAD _build/nrf52832_xxaa_s132_sha256.c.o
+LOAD _build/nrf52832_xxaa_s132_boards.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_drv_common.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_drv_rng.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_nvmc.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_ble_dfu.c.o
+LOAD _build/nrf52832_xxaa_s132_dfu-cc.pb.c.o
+LOAD _build/nrf52832_xxaa_s132_dfu_public_key.c.o
+LOAD _build/nrf52832_xxaa_s132_dfu_req_handling.c.o
+LOAD _build/nrf52832_xxaa_s132_main.c.o
+LOAD _build/nrf52832_xxaa_s132_ble_advdata.c.o
+LOAD _build/nrf52832_xxaa_s132_ble_conn_params.c.o
+LOAD _build/nrf52832_xxaa_s132_ble_srv_common.c.o
+LOAD _build/nrf52832_xxaa_s132_pb_common.c.o
+LOAD _build/nrf52832_xxaa_s132_pb_decode.c.o
+LOAD _build/nrf52832_xxaa_s132_gcc_startup_nrf52.S.o
+LOAD _build/nrf52832_xxaa_s132_system_nrf52.c.o
+LOAD _build/nrf52832_xxaa_s132_softdevice_handler.c.o
+LOAD _build/nrf52832_xxaa_s132_softdevice_handler_appsh.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_bootloader.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_bootloader_app_start.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_bootloader_info.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_dfu.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_dfu_flash.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_dfu_mbr.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_dfu_settings.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_dfu_transport.c.o
+LOAD _build/nrf52832_xxaa_s132_nrf_dfu_utils.c.o
+LOAD ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libm.a
+START GROUP
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a
+END GROUP
+START GROUP
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a
+END GROUP
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+START GROUP
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc.a
+LOAD /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a
+END GROUP
+
+.igot.plt       0x20002c74        0x0 load address 0x0007d284
+ .igot.plt      0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+
+.bootloaderSettings
+                0x0007f000     0x1000
+ .bootloaderSettings
+                0x0007f000     0x1000 /tmp/ccuRNpCe.ltrans3.ltrans.o
+                0x0007f000                m_dfu_settings_buffer
+
+.uicrBootStartAddress
+                0x10001014        0x4
+ *(.uicrBootStartAddress)
+ .uicrBootStartAddress
+                0x10001014        0x4 /tmp/ccuRNpCe.ltrans1.ltrans.o
+
+.mbrParamsPage
+
+.uicrMbrParamsPageAddress
+                0x10001018        0x4
+ *(.uicrMbrParamsPageAddress)
+ .uicrMbrParamsPageAddress
+                0x10001018        0x4 /tmp/ccuRNpCe.ltrans1.ltrans.o
+
+.noinit
+                0x1000101c                . = ALIGN (0x4)
+
+.fs_data        0x20002c74       0x10 load address 0x0007d284
+                0x20002c74                PROVIDE (__start_fs_data, .)
+ *(.fs_data)
+ .fs_data       0x20002c74       0x10 /tmp/ccuRNpCe.ltrans3.ltrans.o
+                0x20002c84                PROVIDE (__stop_fs_data, .)
+                0x20002c84                . = ALIGN (0x4)
+
+.svc_data       0x20002c84        0x0
+                0x20002c84                PROVIDE (__start_svc_data, .)
+ *(.svc_data)
+                0x20002c84                PROVIDE (__stop_svc_data, .)
+                0x20002c84                . = ALIGN (0x4)
+
+.dfu_trans      0x20002c84        0x8 load address 0x0007d294
+                0x20002c84                PROVIDE (__start_dfu_trans, .)
+ *(.dfu_trans)
+ .dfu_trans     0x20002c84        0x8 /tmp/ccuRNpCe.ltrans2.ltrans.o
+                0x20002c8c                PROVIDE (__stop_dfu_trans, .)
+
+.rel.dyn        0x20002c8c        0x0 load address 0x0007d29c
+ .rel.iplt      0x00000000        0x0 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+
+.bss            0x20002c8c      0xc2c load address 0x0007d29c
+                0x20002c8c                . = ALIGN (0x4)
+                0x20002c8c                __bss_start__ = .
+ *(.bss*)
+ .bss           0x20002c8c       0x1c /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .bss           0x20002ca8      0x450 /tmp/ccuRNpCe.ltrans0.ltrans.o
+ .bss           0x200030f8       0x3e /tmp/ccuRNpCe.ltrans1.ltrans.o
+ *fill*         0x20003136        0x2 
+ .bss           0x20003138      0x35d /tmp/ccuRNpCe.ltrans2.ltrans.o
+                0x20003138                m_conn_handle.lto_priv.104
+                0x2000313a                m_update_count.lto_priv.126
+                0x2000313c                m_conn_params_config.lto_priv.123
+                0x20003158                m_preferred_conn_params.lto_priv.125
+                0x20003160                m_flash_operations_pending.lto_priv.150
+                0x20003164                m_current_conn_params.lto_priv.156
+                0x2000316c                m_change_param.lto_priv.124
+                0x20003180                packet.lto_priv.152
+                0x200032ac                m_evt_schedule_func.lto_priv.171
+                0x20003328                mp_timer_id_head.lto_priv.168
+                0x2000332c                m_ticks_elapsed_q_read_ind.lto_priv.169
+                0x2000332d                m_ticks_elapsed_q_write_ind.lto_priv.170
+                0x20003330                m_ticks_latest.lto_priv.167
+                0x20003334                m_queue_event_headers.lto_priv.173
+                0x20003488                m_queue_event_data.lto_priv.174
+                0x2000348c                m_queue_end_index.lto_priv.172
+                0x2000348d                m_queue_start_index.lto_priv.175
+                0x2000348e                m_queue_size.lto_priv.176
+                0x20003490                m_firmware_size_req.lto_priv.148
+                0x20003494                m_valid_init_packet_present.lto_priv.149
+ *fill*         0x20003495        0x3 
+ .bss           0x20003498      0x1ea /tmp/ccuRNpCe.ltrans3.ltrans.o
+                0x20003498                flash_operation_pending.lto_priv.110
+                0x200034a0                m_flags.lto_priv.83
+                0x200034a4                m_queue.lto_priv.166
+                0x2000350c                m_sys_evt_handler.lto_priv.108
+                0x20003510                m_ble_evt_handler.lto_priv.128
+                0x20003516                m_ble_evt_buffer_size.lto_priv.130
+                0x20003518                mp_ble_evt_buffer.lto_priv.129
+                0x2000351c                m_softdevice_enabled.lto_priv.132
+                0x2000351d                m_flags.lto_priv.82
+                0x2000367c                m_evt_schedule_func.lto_priv.131
+                0x20003680                m_queue_event_size.lto_priv.109
+ *fill*         0x20003682        0x2 
+ .bss           0x20003684      0x1e4 /tmp/ccuRNpCe.ltrans5.ltrans.o
+                0x20003684                nrf_nvic_state
+                0x20003690                m_op_queue.lto_priv.102
+                0x20003698                m_conn_params_timer_id_data.lto_priv.101
+                0x200036b8                hash_data.lto_priv.113
+                0x200036c0                m_flags.lto_priv.114
+                0x200036c4                m_notif_buffer.lto_priv.155
+                0x200036d4                m_dfu.lto_priv.121
+                0x200036e8                s_dfu_settings
+                0x20003844                m_firmware_start_addr.lto_priv.107
+                0x20003848                hash.lto_priv.153
+ .bss           0x20003868       0x50 /tmp/ccuRNpCe.ltrans6.ltrans.o
+ *(COMMON)
+                0x200038b8                . = ALIGN (0x4)
+                0x200038b8                __bss_end__ = .
+
+.heap           0x200038b8        0x0
+                0x200038b8                __HeapBase = .
+                0x200038b8                __end__ = .
+                0x200038b8                PROVIDE (end, .)
+ *(.heap*)
+ .heap          0x200038b8        0x0 _build/nrf52832_xxaa_s132_gcc_startup_nrf52.S.o
+                0x200038b8                __HeapLimit = .
+
+.stack_dummy    0x200038b8     0x2000
+ *(.stack*)
+ .stack         0x200038b8     0x2000 _build/nrf52832_xxaa_s132_gcc_startup_nrf52.S.o
+                0x20007f80                __StackTop = (ORIGIN (RAM) + 0x5380)
+                0x20005f80                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
+                0x20007f80                PROVIDE (__stack, __StackTop)
+                0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
+OUTPUT(_build/nrf52832_xxaa_s132.out elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x30
+ .ARM.attributes
+                0x00000000       0x22 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crti.o
+ .ARM.attributes
+                0x00000022       0x34 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtbegin.o
+ .ARM.attributes
+                0x00000056       0x20 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/crt0.o
+ .ARM.attributes
+                0x00000076       0x34 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x000000aa       0x34 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x000000de       0x34 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000112       0x34 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000146       0x34 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a(_exit.o)
+ .ARM.attributes
+                0x0000017a       0x37 /tmp/ccuRNpCe.ltrans0.ltrans.o
+ .ARM.attributes
+                0x000001b1       0x37 /tmp/ccuRNpCe.ltrans1.ltrans.o
+ .ARM.attributes
+                0x000001e8       0x37 /tmp/ccuRNpCe.ltrans2.ltrans.o
+ .ARM.attributes
+                0x0000021f       0x37 /tmp/ccuRNpCe.ltrans3.ltrans.o
+ .ARM.attributes
+                0x00000256       0x37 /tmp/ccuRNpCe.ltrans4.ltrans.o
+ .ARM.attributes
+                0x0000028d       0x37 /tmp/ccuRNpCe.ltrans5.ltrans.o
+ .ARM.attributes
+                0x000002c4       0x37 /tmp/ccuRNpCe.ltrans6.ltrans.o
+ .ARM.attributes
+                0x000002fb       0x22 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/libgcc.a(_ashldi3.o)
+ .ARM.attributes
+                0x0000031d       0x1c _build/nrf52832_xxaa_s132_gcc_startup_nrf52.S.o
+ .ARM.attributes
+                0x00000339       0x39 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .ARM.attributes
+                0x00000372       0x34 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcmp.o)
+ .ARM.attributes
+                0x000003a6       0x34 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x000003da       0x34 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x0000040e       0x34 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtend.o
+ .ARM.attributes
+                0x00000442       0x22 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/fpu/crtn.o
+
+.comment        0x00000000       0x70
+ .comment       0x00000000       0x71 /tmp/ccuRNpCe.ltrans0.ltrans.o
+ .comment       0x00000000       0x71 /tmp/ccuRNpCe.ltrans1.ltrans.o
+ .comment       0x00000000       0x71 /tmp/ccuRNpCe.ltrans2.ltrans.o
+ .comment       0x00000000       0x71 /tmp/ccuRNpCe.ltrans3.ltrans.o
+ .comment       0x00000000       0x71 /tmp/ccuRNpCe.ltrans4.ltrans.o
+ .comment       0x00000000       0x71 /tmp/ccuRNpCe.ltrans5.ltrans.o
+ .comment       0x00000000       0x71 /tmp/ccuRNpCe.ltrans6.ltrans.o
+ .comment       0x00000000       0x70 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                                 0x71 (size before relaxing)
+
+.debug_frame    0x00000000      0xa08
+ .debug_frame   0x00000000       0x28 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-exit.o)
+ .debug_frame   0x00000028       0x2c /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00000054       0x20 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000074       0x20 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libnosys.a(_exit.o)
+ .debug_frame   0x00000094      0x904 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_frame   0x00000998       0x28 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcmp.o)
+ .debug_frame   0x000009c0       0x28 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x000009e8       0x20 /usr/local/gcc-arm-none-eabi-4_9-2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-strlen.o)
+
+.debug_info     0x00000000     0x534a
+ .debug_info    0x00000000     0x534a ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+
+.debug_abbrev   0x00000000      0x4cd
+ .debug_abbrev  0x00000000      0x4cd ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+
+.debug_loc      0x00000000     0x2dd1
+ .debug_loc     0x00000000     0x2dd1 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+
+.debug_aranges  0x00000000      0x288
+ .debug_aranges
+                0x00000000      0x288 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+
+.debug_ranges   0x00000000      0x348
+ .debug_ranges  0x00000000      0x348 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+
+.debug_macro    0x00000000      0xfeb
+ .debug_macro   0x00000000      0x251 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_macro   0x00000251      0x89e ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_macro   0x00000aef       0x22 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_macro   0x00000b11       0x44 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_macro   0x00000b55       0xe3 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_macro   0x00000c38       0x22 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_macro   0x00000c5a      0x1df ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_macro   0x00000e39       0x4c ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_macro   0x00000e85       0x3a ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_macro   0x00000ebf       0x5f ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_macro   0x00000f1e       0x69 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_macro   0x00000f87       0x12 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+ .debug_macro   0x00000f99       0x52 ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+
+.debug_line     0x00000000      0xd7f
+ .debug_line    0x00000000      0xd7f ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+
+.debug_str      0x00000000     0xa59b
+ .debug_str     0x00000000     0xa59b ../../../../../external/micro-ecc/nrf52_armgcc/armgcc/micro_ecc_lib_nrf52.a(micro_ecc_lib_uECC.c.o)
+                               0xa7b2 (size before relaxing)
